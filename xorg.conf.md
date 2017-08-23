@@ -1,4 +1,4 @@
-#Touchpad stuff
+# Touchpad stuff
 
 This is based on https://howchoo.com/g/mdy0ngziogm/the-perfect-almost-touchpad-settings-on-linux-2
 
