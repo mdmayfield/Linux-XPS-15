@@ -7,6 +7,7 @@ That is, either `xinput set-prop 12 303 49 1179 50 878` or **/etc/X11/xorg.conf*
 
 ```
 Section "InputClass"
+    Identifier "touchpad"
     MatchDriver "synaptics"
     MatchIsTouchpad "on"
     Option "AreaLeftEdge" "49"
