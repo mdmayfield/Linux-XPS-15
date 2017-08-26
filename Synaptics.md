@@ -16,3 +16,10 @@ Section "InputClass"
     Option "AreaBottomEdge" "878"
 EndSection
 ```
+
+The XPS 15 trackpad is either not noisy, or doesn't seem to need noise reduction. So, to make the trackpad more responsive to smaller movements I am also trying
+
+```
+    Option "HorizHysteresis" "0"
+    Option "VertHysteresis" "0"
+```
