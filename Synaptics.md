@@ -25,3 +25,5 @@ The XPS 15 trackpad is either not noisy, or doesn't seem to need noise reduction
 ```
 
 AKA `xinput set-prop 12 "Synaptics Noise Cancellation" 0 0`
+
+The Nvidia card setup, which runs at startup, keeps replacing my xorg.conf, so I have decided for now to use the bash commands as Startup Applications, entered in the Unity GUI.
