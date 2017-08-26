@@ -1,9 +1,9 @@
 # Synaptics settings
 
 I'm giving up on trying to duplicate the Apple touchpad. The worst of the spurious clicks can be eliminated with
-`Synaptics Area (303):	49, 1179, 50, 878`
+`Synaptics Area (301):	49, 1179, 50, 878`
 
-That is, either `xinput set-prop 12 303 49 1179 50 878` or **/etc/X11/xorg.conf** with
+That is, either `xinput set-prop "Synaptics Area" 301 49 1179 50 878` or **/etc/X11/xorg.conf** with
 
 ```
 Section "InputClass"
@@ -23,3 +23,5 @@ The XPS 15 trackpad is either not noisy, or doesn't seem to need noise reduction
     Option "HorizHysteresis" "0"
     Option "VertHysteresis" "0"
 ```
+
+AKA `xinput set-prop 12 "Synaptics Noise Cancellation" 0 0`
