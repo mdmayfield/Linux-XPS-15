@@ -3,7 +3,7 @@
 I'm giving up on trying to duplicate the Apple touchpad. The worst of the spurious clicks can be eliminated with
 `Synaptics Area (301):	49, 1179, 50, 878`
 
-That is, either `xinput set-prop "Synaptics Area" 301 49 1179 50 878` or **/etc/X11/xorg.conf** with
+That is, either `xinput set-prop "DLL06E4:01 06CB:7A13 Touchpad" "Synaptics Area" 49 1179 50 878` or **/etc/X11/xorg.conf** with
 
 ```
 Section "InputClass"
@@ -16,6 +16,13 @@ Section "InputClass"
     Option "AreaBottomEdge" "878"
 EndSection
 ```
+Also, I sometimes trigger the right click Soft Button Area when clicking with my thumb right in the middle of the trackpad. To avoid this: `xinput set-prop "DLL06E4:01 06CB:7A13 Touchpad" "Synaptics Soft Button Areas" 800 0 760 0 0 0 0 0`
+
+
+
+
+
+# Abandoned Experiments
 
 The XPS 15 trackpad is either not noisy, or doesn't seem to need noise reduction. So, to make the trackpad more responsive to smaller movements I am also trying
 
