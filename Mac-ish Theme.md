@@ -3,4 +3,4 @@
   700  sudo apt install macbuntu-os-icons-lts-v7 
   701  sudo apt install macbuntu-os-ithemes-lts-v7 
   
-  I'm not using their cursors; Dmz-black is better. Also need to change the Window Snapping colors to 0x1666d5 blue to match.
+  I'm not using their cursors; Dmz-black is better. Also need to change the Window Snapping colors to blue to match.
