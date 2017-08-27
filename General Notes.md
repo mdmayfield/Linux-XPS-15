@@ -4,7 +4,7 @@ These are reminders to myself of what to do to set up Ubuntu on my XPS 15 to my 
 1. Trackpad
   - Use Synaptics driver
   - Inset the active area 50px to avoid palm clicks:
-  - `xinput set-prop "DLL06E4:01 06CB:7A13 Touchpad" "Synaptics Area" 301 49 1179 50 878`
+  - `xinput set-prop "DLL06E4:01 06CB:7A13 Touchpad" "Synaptics Area" 49 1179 50 878`
   - Shrink the right-click soft button area slightly (was 614 0 760 0):
   - `xinput set-prop "DLL06E4:01 06CB:7A13 Touchpad" "Synaptics Soft Button Areas" 800 0 760 0 0 0 0 0`
   - Get used to not resting thumb on trackpad :-(
