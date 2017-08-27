@@ -33,3 +33,6 @@ These are reminders to myself of what to do to set up Ubuntu on my XPS 15 to my 
 - Kernel is `4.10.0-28-generic #32~16.04.2-Ubuntu SMP Thu Jul 20 10:19:48 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux`
 - Testing install `linux-image-lowlatency-hwe-16.04-edge` to see if any difference (and also try out the LL kernel anyway)
 - Something else to try will be changing from `xserver-xorg-video-intel-hwe-16.04/xenial-updates,now 2:2.99.917+git20170309-0ubuntu1~16.04.1 amd64 [installed]` to `xserver-xorg-video-intel/xenial-updates 2:2.99.917+git20160325-1ubuntu1.2 amd64`
+- Lowlatency "edge" kernel seems to have fixed garbage during window resizing (maybe; it's intermittent). Uname output is `4.11.0-14-lowlatency #20~16.04.1-Ubuntu SMP PREEMPT Wed Aug 9 10:04:55 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux`
+- Kdenlive still doesn't render transitions properly with GPU enabled, but maybe that's an application level issue.
+- More testing needed to confirm if HWE LL Edge kernel is a fix
