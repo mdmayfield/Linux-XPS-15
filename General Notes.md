@@ -25,3 +25,4 @@ These are reminders to myself of what to do to set up Ubuntu on my XPS 15 to my 
   - Get rid of that stupid fscking (literally, lol) text mode /dev/sda1 clean message during bootup
   - Set up bumblebee for Nvidia Optimus to work as needed
   - Get TLP set up and tested and be aware of https://github.com/linrunner/TLP/issues/278
+  - Install redshift-gtk for f.lux like functionality
