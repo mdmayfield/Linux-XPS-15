@@ -26,3 +26,8 @@ These are reminders to myself of what to do to set up Ubuntu on my XPS 15 to my 
   - Set up bumblebee for Nvidia Optimus to work as needed
   - Get TLP set up and tested and be aware of https://github.com/linrunner/TLP/issues/278
   - Install redshift-gtk for f.lux like functionality
+
+## First Reinstall 2017-08-27
+- OOTB, Ubuntu 16.04 with no proprietary drivers or updates while installing
+- Graphical garbage/flickering happens immediately on first boot (when resizing Firefox for example)
+- Kernel is `4.10.0-28-generic #32~16.04.2-Ubuntu SMP Thu Jul 20 10:19:48 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux`
