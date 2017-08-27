@@ -32,3 +32,4 @@ These are reminders to myself of what to do to set up Ubuntu on my XPS 15 to my 
 - Graphical garbage/flickering happens immediately on first boot (when resizing Firefox for example)
 - Kernel is `4.10.0-28-generic #32~16.04.2-Ubuntu SMP Thu Jul 20 10:19:48 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux`
 - Testing install `linux-image-lowlatency-hwe-16.04-edge` to see if any difference (and also try out the LL kernel anyway)
+- Something else to try will be changing from `xserver-xorg-video-intel-hwe-16.04/xenial-updates,now 2:2.99.917+git20170309-0ubuntu1~16.04.1 amd64 [installed]` to `xserver-xorg-video-intel/xenial-updates 2:2.99.917+git20160325-1ubuntu1.2 amd64`
