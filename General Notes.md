@@ -22,5 +22,5 @@ These are reminders to myself of what to do to set up Ubuntu on my XPS 15 to my 
   - Non-orange theme
   - Create a virtual keypad from m,. jkl uio 789
     - xkb seems to be key (haha) here
-  
-  
+  - Get rid of that stupid fscking (literally, lol) text mode /dev/sda1 clean message during bootup
+  - Set up bumblebee for Nvidia Optimus to work as needed
