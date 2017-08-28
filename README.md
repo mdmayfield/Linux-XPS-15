@@ -42,6 +42,12 @@ In Linux, this is slightly more of a manual process and community devs are still
   - `sudo ln -s /usr/lib32/nvidia-375 /usr/lib32/nvidia-current`
 - Enable the bumblebeed service:
   - `sudo systemctl enable bumblebeed`
+- Make the kernel load the Intel and bbswitch modules. `sudo nano /etc/modules` and add these lines:
+```
+i915
+bbswitch
+```
+- `sudo prime-select intel` so that the Intel card is default
 - Changes take effect after reboot. Good luck.
 - To run a program with the discrete graphics card, prefix its command line with `optirun` or `primusrun`
 - My first impression is that primusrun is faster, but need to do further testing
