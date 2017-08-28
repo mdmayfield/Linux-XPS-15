@@ -12,3 +12,7 @@
 - Install some basics like redshift, gimp, kdenlive, etc.
 - Install current wine (not 1.6?! as in LTS repos)
 - Fix /dev/sda clean message, etc.
+
+# On second thought
+
+How often am I going to be reinstalling the OS? More worth it to just create a step by step checklist.
