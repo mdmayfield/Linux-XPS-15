@@ -80,4 +80,6 @@ Looks like this may have to do with not having Linux headers... running `sudo ap
 
 That seems to be because in bumblebee.conf, the KernelDriver was set to "nvidia" but there was no module called that. After changing KernelModule=nvidia-375, the error changes to `[ERROR]Cannot open or write pidfile /var/run/bumblebeed.pid.`
 
-Guessing this has to do with my user not being in the right group. Researching...
+Guessing this has to do with my user not being in the right group. Researching... was due to not being root (since it's a service). `sudo service bumblebeed start` seems to work now.
+
+Next error: `[ERROR]Cannot access secondary GPU - error: [XORG] (EE) Unable to locate/open config file: "/etc/bumblebee/xorg.conf.nvidia-375"`
