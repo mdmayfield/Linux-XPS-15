@@ -36,3 +36,5 @@ These are reminders to myself of what to do to set up Ubuntu on my XPS 15 to my 
 - Lowlatency "edge" kernel seems to have fixed garbage during window resizing (maybe; it's intermittent). Uname output is `4.11.0-14-lowlatency #20~16.04.1-Ubuntu SMP PREEMPT Wed Aug 9 10:04:55 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux`
 - Kdenlive still doesn't render transitions properly with GPU enabled, but maybe that's an application level issue.
 - More testing needed to confirm if HWE LL Edge kernel is a fix
+- After an hour or so, no graphical glitches seen
+- Trying ppa:bumblebee/bumblebee-stable instead of testing
