@@ -85,3 +85,7 @@ Guessing this has to do with my user not being in the right group. Researching..
 Next error: `[ERROR]Cannot access secondary GPU - error: [XORG] (EE) Unable to locate/open config file: "/etc/bumblebee/xorg.conf.nvidia-375"`
 
 Fixed this by editing bumblebee.conf again - "Driver" needs to = just plain "nvidia" not "nvidia-375".
+
+To see status of discrete graphics card's power: `cat /proc/acpi/bbswitch`
+
+glxgears is part of package **mesa-utils**
