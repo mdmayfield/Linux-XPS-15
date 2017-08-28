@@ -83,3 +83,5 @@ That seems to be because in bumblebee.conf, the KernelDriver was set to "nvidia"
 Guessing this has to do with my user not being in the right group. Researching... was due to not being root (since it's a service). `sudo service bumblebeed start` seems to work now.
 
 Next error: `[ERROR]Cannot access secondary GPU - error: [XORG] (EE) Unable to locate/open config file: "/etc/bumblebee/xorg.conf.nvidia-375"`
+
+Fixed this by editing bumblebee.conf again - "Driver" needs to = just plain "nvidia" not "nvidia-375".
