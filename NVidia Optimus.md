@@ -89,3 +89,5 @@ Fixed this by editing bumblebee.conf again - "Driver" needs to = just plain "nvi
 To see status of discrete graphics card's power: `cat /proc/acpi/bbswitch`
 
 glxgears is part of package **mesa-utils**
+
+Based on a quick subjective test with supertuxkart, **primusrun** looks like it may have better performance than **optirun**. More objective testing needed to confirm.
