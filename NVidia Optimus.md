@@ -64,3 +64,4 @@ update-alternatives: using /usr/lib/nvidia-375/alt_ld.so.conf to provide /etc/ld
 
 /sbin/ldconfig.real: /usr/lib32/nvidia-375/libEGL.so.1 is not a symbolic link
 ```
+According to https://askubuntu.com/questions/900285/libegl-so-1-is-not-a-symbolic-link this should be resolved with `sudo dpkg-reconfigure nvidia*`
