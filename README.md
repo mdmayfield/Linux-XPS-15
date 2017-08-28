@@ -51,3 +51,11 @@ bbswitch
 - Changes take effect after reboot. Good luck.
 - To run a program with the discrete graphics card, prefix its command line with `optirun` or `primusrun`
 - My first impression is that primusrun is faster, but need to do further testing
+
+## Installing Proprietary Codecs Etc. Without Flash Player
+```
+sudo apt update
+sudo apt install libavcodec-extra ttf-mscorefonts-installer unrar
+sudo apt install gstreamer1.0-fluendo-mp3 gstreamer1.0-libav gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly oxideqt-codecs-extra
+```
+As per https://askubuntu.com/questions/97264/how-to-install-ubuntu-restricted-extras-but-not-flash
