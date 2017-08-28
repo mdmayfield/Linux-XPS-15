@@ -38,7 +38,8 @@ In Linux, this is slightly more of a manual process and community devs are still
   - **line 22** change `Driver=` to `Driver=nvidia`
   - **line 57** change `KernelDriver=` to `KernelDriver=nvidia-375` (or other version number as needed to match above)
 - Create link so /usr/lib/nvidia-current points to /usr/lib/nvidia-375 (or other):
-  -  `sudo ln -s /usr/lib/nvidia-375 /usr/lib/nvidia-current`
+  - `sudo ln -s /usr/lib/nvidia-375 /usr/lib/nvidia-current`
+  - `sudo ln -s /usr/lib32/nvidia-375 /usr/lib32/nvidia-current`
 - Enable the bumblebeed service:
   - `sudo systemctl enable bumblebeed`
 - Changes take effect after reboot. Good luck.
