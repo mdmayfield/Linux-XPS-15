@@ -65,3 +65,7 @@ update-alternatives: using /usr/lib/nvidia-375/alt_ld.so.conf to provide /etc/ld
 /sbin/ldconfig.real: /usr/lib32/nvidia-375/libEGL.so.1 is not a symbolic link
 ```
 According to https://askubuntu.com/questions/900285/libegl-so-1-is-not-a-symbolic-link this should be resolved with `sudo dpkg-reconfigure nvidia*`
+I did not do anything like that - sounds like * isn't interpreted by dpkg-reconfigure but that the user has to do it. So forget it for now.
+Latest error after changing bumblebee.conf and restarting is `[   93.421525] [ERROR]The Bumblebee daemon has not been started yet or the socket path /var/run/bumblebee.socket was incorrect.
+[   93.421577] [ERROR]Could not connect to bumblebee daemon - is it running?`
+I think I need to do `sudo systemctl enable bumblebeed` - trying that...
