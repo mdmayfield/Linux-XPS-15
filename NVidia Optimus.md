@@ -29,3 +29,10 @@ Need to see if the stock versions work. They didn't the first time but I changed
 ## Other things
 In `/etc/bumblebee/bumblebee.conf` I changed to Driver=nvidia (instead of blank). *Any way to avoid this? This seems like something that should have been set by default.*
 Rather than changing the LibraryPath and XorgModulePath, I made a symbolic link from /usr/lib/nvidia-current to /usr/lib/nvidia-375.
+
+## Reinstall 2017-08-27
+1. sudo apt-add-repository ppa:bumblebee/testing
+- Note: /stable doesn't work. There is no Xenial version so it gives a cryptic error message like `The repository 'http://ppa.launchpad.net/bumblebee/stable/ubuntu xenial Release' does not have a Release file.
+N: Data from such a repository can't be authenticated and is therefore potentially dangerous to use.`
+2. sudo apt update
+3. 
