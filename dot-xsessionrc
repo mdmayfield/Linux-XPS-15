@@ -1,0 +1,3 @@
+#!/bin/sh
+xinput set-prop "DLL06E4:01 06CB:7A13 Touchpad" "Synaptics Area" 49 1179 50 878
+set-prop "DLL06E4:01 06CB:7A13 Touchpad" "Synaptics Area" 49 1179 50 878
