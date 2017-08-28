@@ -77,3 +77,7 @@ Running "bumblebeed" by itself shows errors:
 [  103.812725] [ERROR]Module 'nvidia' is not found.
 ```
 Looks like this may have to do with not having Linux headers... running `sudo apt install linux-headers-lowlatency-hwe-16.04-edge` ... Progress. After installing those the only error running bumblebeed is `[ERROR]Module 'nvidia' is not found.`
+
+That seems to be because in bumblebee.conf, the KernelDriver was set to "nvidia" but there was no module called that. After changing KernelModule=nvidia-375, the error changes to `[ERROR]Cannot open or write pidfile /var/run/bumblebeed.pid.`
+
+Guessing this has to do with my user not being in the right group. Researching...
