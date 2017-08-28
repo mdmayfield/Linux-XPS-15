@@ -37,3 +37,4 @@ N: Data from such a repository can't be authenticated and is therefore potential
 2. sudo apt update
 3. sudo apt install nvidia-375
 4. sudo apt install bumblebee bumblebee-nvidia primus
+- At this point: rebooted. Got login prompt, but then couldn't log in - got sent back to login. Switched to another TTY, researched with Lynx, set prime-select intel. Was able to startx and run nvidia-settings, but it seemed weird... restarted again and was able to log in normally with intel selected.
