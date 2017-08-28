@@ -68,4 +68,4 @@ According to https://askubuntu.com/questions/900285/libegl-so-1-is-not-a-symboli
 I did not do anything like that - sounds like * isn't interpreted by dpkg-reconfigure but that the user has to do it. So forget it for now.
 Latest error after changing bumblebee.conf and restarting is `[   93.421525] [ERROR]The Bumblebee daemon has not been started yet or the socket path /var/run/bumblebee.socket was incorrect.
 [   93.421577] [ERROR]Could not connect to bumblebee daemon - is it running?`
-I think I need to do `sudo systemctl enable bumblebeed` - trying that...
+I think I need to do `sudo systemctl enable bumblebeed` - trying that followed by `sudo service bumblebeed start`
