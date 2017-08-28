@@ -6,14 +6,14 @@ This assumes regular vanilla Ubuntu 16.04 LTS. I installed (off a 4GB SD card, o
 ## Making the Touchpad Better
 It still isn't 100% reliable and trustworthy like a MBP trackpad on MacOS / OS X, and there is no thumb rejection so you can't rest your thumb on the button area. :-( But the phantom taps can be mostly fixed, the right-click soft button area can be shrunk for convenience, and a few other tweaks can make it a bit more useful.
 
-- Create a .xessionrc file in ~ as per [the one saved here]( Linux-XPS-15/dot-xsessionrc ).
+- Create a .xessionrc file in ~ as per [the one saved here]( dot-xsessionrc ).
 - Files starting with . are hidden. View Hidden Files in the GUI or use `ls -a` to see them
 - Changes will take effect after X11 restarts (reboot, logout/login, etc.)
 - Or, open a terminal and `. .xsessionrc` to activate immediately
 
 ## Enabling Bluetooth
 Out-of-the-box, Ubuntu 16.04.3 at least doesn't work properly with my XPS 15's Bluetooth. YMMV. Apparently, as mentioned on the [Ubuntu forums](https://ubuntuforums.org/showthread.php?t=2317843), there is a missing firmware file.
-- Copy [BCM-0a5c-6410.hcd]( Linux-XPS-15/BCM-0a5c-6410.hcd ) to **/lib/firmware/brcm/**
+- Copy [BCM-0a5c-6410.hcd]( BCM-0a5c-6410.hcd ) to **/lib/firmware/brcm/**
 - Changes will take effect after reboot
 - Reboot can probably be done just once, after doing other steps in this guide too (I didn't test)
 
