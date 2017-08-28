@@ -76,3 +76,4 @@ Running "bumblebeed" by itself shows errors:
 [  103.812635] [WARN]No switching method available. The dedicated card will always be on.
 [  103.812725] [ERROR]Module 'nvidia' is not found.
 ```
+Looks like this may have to do with not having Linux headers... running `sudo apt install linux-headers-lowlatency-hwe-16.04-edge`
