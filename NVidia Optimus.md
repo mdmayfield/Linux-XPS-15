@@ -35,4 +35,5 @@ Rather than changing the LibraryPath and XorgModulePath, I made a symbolic link 
 - Note: /stable doesn't work. There is no Xenial version so it gives a cryptic error message like `The repository 'http://ppa.launchpad.net/bumblebee/stable/ubuntu xenial Release' does not have a Release file.
 N: Data from such a repository can't be authenticated and is therefore potentially dangerous to use.`
 2. sudo apt update
-3. 
+3. sudo apt install nvidia-375
+4. sudo apt install bumblebee bumblebee-nvidia primus
