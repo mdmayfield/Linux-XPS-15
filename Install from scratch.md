@@ -10,4 +10,5 @@
 ### Then:
 - TLP settings (and avoid it conflicting with Bumblebee)
 - Install some basics like redshift, gimp, kdenlive, etc.
+- Install current wine (not 1.6?! as in LTS repos)
 - Fix /dev/sda clean message, etc.
