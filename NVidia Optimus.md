@@ -91,3 +91,17 @@ To see status of discrete graphics card's power: `cat /proc/acpi/bbswitch`
 glxgears is part of package **mesa-utils**
 
 Based on a quick subjective test with supertuxkart, **primusrun** looks like it may have better performance than **optirun**. More objective testing needed to confirm.
+
+# Script tests
+Planning to run these commands in preparation for using them in a helper script. Runs with root privileges.
+```
+apt-add-repository -y ppa:bumblebee/testing
+apt update
+apt-get -y install linux-image-lowlatency-hwe-16.04-edge nvidia-375 bumblebee bumblebee-nvidia primus
+```
+*A miracle occurs which updates /etc/bumblebee/bumblebee.conf correctly*
+```
+ln -s /usr/lib/nvidia-375 /usr/lib/nvidia-current
+systemctl enable bumblebeed
+shutdown -r now
+```
