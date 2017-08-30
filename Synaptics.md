@@ -18,7 +18,7 @@ EndSection
 ```
 Also, I sometimes trigger the right click Soft Button Area when clicking with my thumb right in the middle of the trackpad. To avoid this: `xinput set-prop "DLL06E4:01 06CB:7A13 Touchpad" "Synaptics Soft Button Areas" 800 0 760 0 0 0 0 0`
 
-
+**Update**: Now trying `xinput set-prop 12 299 100 1130 50 850` to shrink the area a little bit due to a few palm mistriggers and easier clicking of the pad.
 
 
 
