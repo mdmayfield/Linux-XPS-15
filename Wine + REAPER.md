@@ -1,0 +1,1 @@
+Seeing a lot of buffer underruns when using ALSA driver in Wine plus WASAPI mode within REAPER, which is weird because that always seemed to work just fine on other computers. For now using PulseAudio driver and WaveOut.
