@@ -1,5 +1,5 @@
 # Keyboard Shortcuts
-An attempt to adapt my OS to my keyboard shortcut muscle memory, and not the other way around.
+An attempt to adapt my Ubuntu Linux OS to my MacOS keyboard shortcut muscle memory, and not the other way around.
 
 1. Swap modifier keys. Currently my approach is to alter `/usr/share/X11/xkb/symbols/pc` but I'd prefer to do this in ~ somehow.
 2. Change keys in Control Center, Unity Tweak Tool, and CompizConfig Settings Manager. (Set switcher to Ctrl-Tab which is physical Alt-Tab)
