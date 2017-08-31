@@ -5,3 +5,4 @@ An attempt to adapt my OS to my keyboard shortcut muscle memory, and not the oth
 2. Change keys in Control Center, Unity Tweak Tool, and CompizConfig Settings Manager. (Set switcher to Ctrl-Tab which is physical Alt-Tab)
 3. Text editing shortcuts as per something like [this?](http://www.linuxproblem.org/art_17.html)
 4. `autokey-gtk` for things like Shift-Cmd-Left/Right for switching tabs in browsers
+5. xkb rediect actions - https://superuser.com/questions/585300/how-to-make-control-j-works-as-return-without-control-bit-set-using-xkb-and
