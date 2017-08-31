@@ -27,7 +27,7 @@ An attempt to adapt my Ubuntu Linux OS to my MacOS keyboard shortcut muscle memo
 - In browsers, Shift-Alt-Right becomes Ctrl-Tab
 
 ### Other Settings:
-- In Unity Tweak/CompizConfig, "Previous window" becomes Ctrl-` instead of Alt-Shift-Tab
+- In Unity Tweak/CompizConfig, "Previous window" becomes Ctrl-\` instead of Alt-Shift-Tab
 
 ## Results
 
