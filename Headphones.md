@@ -9,3 +9,5 @@ i.e. I put this at the end of `/etc/modprobe.d/alsa-base.conf`:
 # MM added for XPS 15 9550
 options snd-hda-intel model=dell-headset-multi
 ```
+---
+Nope, that didn't work. Continuing to research.
