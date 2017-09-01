@@ -10,8 +10,12 @@ i.e. I put this at the end of `/etc/modprobe.d/alsa-base.conf`:
 options snd-hda-intel model=dell-headset-multi
 ```
 ---
+
 Nope, that didn't work. Continuing to research.
+
 ---
+## Workaround
+
 After making that change, I tried putting the laptop to sleep (closing lid) *while headphones were connected*. I heard a click in the headphones, then opened the laptop again and sound played through the headphones. After this, headphone plug/unplug seems to work fully as expected.
 
 Note that I don't know whether the above change to alsa-base.conf was actually part of the solution or not, yet.
