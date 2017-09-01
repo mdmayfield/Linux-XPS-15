@@ -53,3 +53,5 @@ https://geekhack.org/index.php?topic=70788.0
 https://superuser.com/questions/585300/how-to-make-control-j-works-as-return-without-control-bit-set-using-xkb-and
 https://unix.stackexchange.com/questions/236089/transparently-mapping-a-modified-key-with-xkb
 https://www.mail-archive.com/i18n@xfree86.org/msg01867.html
+
+** https://stackoverflow.com/questions/32822857/how-to-emulate-integrated-numeric-keypad-cursor-keys-in-linux **
