@@ -1,0 +1,9 @@
+default partial alphanumeric_keys modifier_keys
+xkb_symbols "swap_mac_style" {
+    replace key <LALT> { [ Control_L, Control_L ] };
+    replace key <LWIN> { [ Alt_L, Meta_L ] };
+    replace key <LCTL> { [ Super_L ] };
+    replace key <RALT> { [ Control_R, Control_R ] };
+    replace key <RWIN> { [ Alt_R, Meta_R ] };
+    replace key <RCTL> { [ Super_R ] };
+};

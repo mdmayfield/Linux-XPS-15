@@ -1,0 +1,23 @@
+partial default xkb_types "default" {
+
+type "OptHeld" {
+  modifiers = Shift+Alt;
+  map[Shift] = level2;
+  map[Alt] = level3;
+  map[Shift+Alt] = level3;
+  level_name[Level1] = "Base";
+  level_name[Level2] = "Shift";
+  level_name[Level3] = "Opt";
+};
+
+type "CmdHeld" {
+  modifiers = Shift+Control;
+  map[Shift] = level2;
+  map[Control] = level3;
+  map[Shift+Control] = level3;
+  level_name[Level1] = "Base";
+  level_name[Level2] = "Shift";
+  level_name[Level3] = "Cmd";
+};
+
+};
