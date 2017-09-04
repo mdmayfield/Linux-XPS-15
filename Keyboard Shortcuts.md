@@ -1,73 +1,200 @@
 # Keyboard Shortcuts
-An attempt to adapt my Ubuntu Linux OS to my MacOS keyboard shortcut muscle memory, and not the other way around.
 
-1. Swap modifier keys. Currently my approach is to alter `/usr/share/X11/xkb/symbols/pc` but I'd prefer to do this in ~ somehow.
-2. Change keys in Control Center, Unity Tweak Tool, and CompizConfig Settings Manager. (Set switcher to Ctrl-Tab which is physical Alt-Tab)
-3. Text editing shortcuts as per something like [this?](http://www.linuxproblem.org/art_17.html)
-4. `autokey-gtk` for things like Shift-Cmd-Left/Right for switching tabs in browsers
-5. xkb rediect actions - https://superuser.com/questions/585300/how-to-make-control-j-works-as-return-without-control-bit-set-using-xkb-and
+System-level file changes in `/usr/share/X11/xkb/`:
 
-# Keyboard Shortcut Plan
+1. types/mm-arrow-swap
+```
+partial default xkb_types "default" {
 
-## Remapping
+type "CMD_OPT_HELD" {
+  modifiers = Alt+Control;
+  map[None] = Level1;
+  map[Alt] = Level2;
+  map[Control] = Level3;
+  map[Alt+Control] = Level4;
+  level_name[Level1] = "Base";
+  level_name[Level2] = "Alt";
+  level_name[Level3] = "Control";
+  level_name[Level4] = "Alt+Control";
+};
 
-### Low Level Symbol Remap:
+};
+```
+2. types/complete
+```
+default xkb_types "complete" {
+    include "basic"
+    include "mousekeys"
+    include "pc"
+    include "iso9995"
+    include "level5"
+    include "extra"
+    include "numpad"
+    include "mm-arrow-swap"
+};
+```
+- Note last line was added.
+3. symbols/pc
+```
+default  partial alphanumeric_keys modifier_keys
+xkb_symbols "pc105" {
+
+    key <ESC>  {	[ Escape		]	};
+
+    // The extra key on many European keyboards:
+    key <LSGT> {	[ less, greater, bar, brokenbar ] };
+
+    // The following keys are common to all layouts.
+    key <BKSL> {	[ backslash,	bar	]	};
+    key <SPCE> {	[ 	 space		]	};
+
+    include "srvr_ctrl(fkey2vt)"
+    include "pc(editing)"
+    include "keypad(x11)"
+
+    key <BKSP> {	[ BackSpace, BackSpace	]	};
+
+    key  <TAB> {	[ Tab,	ISO_Left_Tab	]	};
+    key <RTRN> {	[ Return		]	};
+
+    key <CAPS> {	[ Caps_Lock		]	};
+    key <NMLK> {	[ Num_Lock 		]	};
+
+    key <LFSH> {	[ Shift_L		]	};
+    key <LCTL> {	[ Control_L		]	};
+    key <LWIN> {	[ Super_L		]	};
+
+    key <RTSH> {	[ Shift_R		]	};
+    key <RCTL> {	[ Control_R		]	};
+    key <RWIN> {	[ Super_R		]	};
+    key <MENU> {	[ Menu			]	};
+
+    // Beginning of modifier mappings.
+    modifier_map Shift  { Shift_L, Shift_R };
+    modifier_map Lock   { Caps_Lock };
+    modifier_map Control{ Control_L, Control_R };
+    modifier_map Mod2   { Num_Lock };
+    modifier_map Mod4   { Super_L, Super_R };
+
+    // Fake keys for virtual<->real modifiers mapping:
+    key <LVL3> {	[ ISO_Level3_Shift	]	};
+    key <MDSW> {	[ Mode_switch 		]	};
+    modifier_map Mod5   { <LVL3>, <MDSW> };
+
+    key <ALT>  {	[ NoSymbol, Alt_L	]	};
+    include "altwin(meta_alt)"
+
+    key <META> {	[ NoSymbol, Meta_L	]	};
+    modifier_map Mod1   { <META> };
+
+    key <SUPR> {	[ NoSymbol, Super_L	]	};
+    modifier_map Mod4   { <SUPR> };
+
+    key <HYPR> {	[ NoSymbol, Hyper_L	]	};
+    modifier_map Mod4   { <HYPR> };
+    // End of modifier mappings.
+
+    // MM custom modifiers for XPS 15
+    replace key <LALT> { [ Control_L, Control_L ] };
+    replace key <LWIN> { [ Alt_L, Meta_L ] };
+    replace key <LCTL> { [ Super_L ] };
+    replace key <RALT> { [ Control_R, Control_R ] };
+    replace key <RCTL> { [ Alt_R ] };
+    // MM custom modifiers for generic PC keyboard
+//    replace key <LALT> { [ Control_L, Control_L ] };
+//    replace key <LWIN> { [ Alt_L, Meta_L ] };
+//    replace key <LCTL> { [ Super_L ] };
+//    replace key <RALT> { [ Control_R, Control_R ] };
+//    replace key <RWIN> { [ Alt_R, Meta_R ] };
+//    replace key <RCTL> { [ Super_R ] };
+    // End custom modifiers
+
+    key <OUTP> { [ XF86Display ] };
+    key <KITG> { [ XF86KbdLightOnOff ] };
+    key <KIDN> { [ XF86KbdBrightnessDown ] };
+    key <KIUP> { [ XF86KbdBrightnessUp ] };
+
+};
+
+hidden partial alphanumeric_keys
+xkb_symbols "editing" {
+    key <PRSC> {
+	type= "PC_ALT_LEVEL2",
+	symbols[Group1]= [ Print, Sys_Req ]
+    };
+    key <SCLK> {	[  Scroll_Lock		]	};
+    key <PAUS> {
+	type= "PC_CONTROL_LEVEL2",
+	symbols[Group1]= [ Pause, Break ]
+    };
+    key  <INS> {	[  Insert		]	};
+    key <HOME> {	[  Home			]	};
+    key <PGUP> {	[  Prior		]	};
+    key <DELE> {	[  Delete		]	};
+    key  <END> {	[  End			]	};
+    key <PGDN> {	[  Next			]	};
+
+//    key   <UP> {	[  Up			]	};
+    key <UP> {
+      type = "CMD_OPT_HELD",
+      symbols[Group1] = [ Up, Up, Up, Up ],
+      actions[Group1] = [ NoAction(),
+         RedirectKey(key=<UP>,clearmods=Control+Mod1,modifiers=Control),
+         RedirectKey(key=<UP>,clearmods=Control+Mod1,modifiers=Mod1),
+         NoAction() ]
+    };
+
+//    key <LEFT> {	[  Left			]	};
+    key <LEFT> {
+      type[Group1] = "CMD_OPT_HELD",
+      symbols[Group1] = [ Left, Left, Left, Left ],
+      actions[Group1] = [ NoAction(),
+         RedirectKey(key=<LEFT>,clearmods=Control+Mod1,modifiers=Control),
+         RedirectKey(key=<LEFT>,clearmods=Control+Mod1,modifiers=Mod1),
+         NoAction() ]
+    };
+
+//    key <DOWN> {	[  Down 	 	]	};
+    key <DOWN> {
+      type = "CMD_OPT_HELD",
+      symbols[Group1] = [ Down, Down, Down, Down ],
+      actions[Group1] = [ NoAction(),
+         RedirectKey(key=<DOWN>,clearmods=Control+Mod1,modifiers=Control),
+         RedirectKey(key=<DOWN>,clearmods=Control+Mod1,modifiers=Mod1),
+         NoAction() ]
+    };
+
+//    key <RGHT> {	[  Right		]	};
+    key <RGHT> {
+      type = "CMD_OPT_HELD",
+      symbols[Group1] = [ Right, Right, Right, Right ],
+      actions[Group1] = [ NoAction(),
+         RedirectKey(key=<RGHT>,clearmods=Control+Mod1,modifiers=Control),
+         RedirectKey(key=<RGHT>,clearmods=Control+Mod1,modifiers=Mod1),
+         NoAction() ]
+    };
+
+};
+```
+
+This performs the following:
+
 - Physical LAlt/RAlt become logical LCtl/RCtl
 - Physical LWin/RCtl become logical LAlt/RAlt
 - Physical LCtl becomes logical Super
+- (Shift)-Ctrl-Arrows become (Shift)-Alt-Arrows
+- (Shift)-Alt-Arrows become (Shift)-Ctrl-Arrows
 
-### Xkb redirects:
-- (Shift)-Ctrl-Tab becomes (Shift)-Alt-Tab
-- (Shift)-Super-Tab becomes (Shift)-Ctrl-Tab
-- (Shift)-Ctrl-LRUD becomes (Shift)-Alt-LRUD
-- (Shift)-Alt-LRUD becomes (Shift)-Ctrl-LRUD
+It has the side effect that autorepeat is disabled on the arrow keys. To circumvent this, add to .xsessionrc:
 
-### AutoKey:
-- In browsers, Shift-Alt-Left becomes Ctrl-Shift-Tab
-- In browsers, Shift-Alt-Right becomes Ctrl-Tab
+```
+# Re-enable repeats disabled by redirect actions
+xset r 113 #Left
+xset r 114 #Right
+xset r 111 #Up
+xset r 116 #Down
+```
 
-### Other Settings:
-- In Unity Tweak/CompizConfig, "Previous window" becomes Ctrl-\` instead of Alt-Shift-Tab
-
-## Results
-
-### App switching:
-- Physical Alt-Tab -> logical Ctrl-Tab -> redirected Alt-Tab
-- Physical Alt-Shift-Tab -> logical Ctrl-Shift-Tab -> redirected Alt-Shift-Tab
-
-### Browsers:
-- Physical Alt-Left/Right -> logical Ctrl-Left/Right -> redirected Alt-Left/Right
-- Physical Shift-Alt-Left -> logical Shift-Ctrl-Left -> redirected Shift-Alt-Left -> AutoKey Ctrl-Shift-Tab
-- Physical Shift-Alt-Right -> logical Shift-Ctrl-Right -> redirected Shift-Alt-Right -> AutoKey Ctrl-Tab
-
-### Text Editing:
-- Physical (Shift)-LWin/RCtl-LRUD -> logical (Shift)-Alt-LRUD -> redirected (Shift)-Ctrl-LRUD
-
-### File Browser:
-- Physical Alt-LRUD -> logical Ctrl-LRUD -> redirected Alt-LRUD
-
--------
-
-Resources:
-https://geekhack.org/index.php?topic=70788.0
-https://superuser.com/questions/585300/how-to-make-control-j-works-as-return-without-control-bit-set-using-xkb-and
-https://unix.stackexchange.com/questions/236089/transparently-mapping-a-modified-key-with-xkb
-https://www.mail-archive.com/i18n@xfree86.org/msg01867.html
-
-** https://stackoverflow.com/questions/32822857/how-to-emulate-integrated-numeric-keypad-cursor-keys-in-linux **
-
---------
-For user-level keyboard switching, put home/.xkb/\* into ~, and run `xkbcomp -I$HOME/.xkb ~/.xkb/keymap/mm-custom-keys $DISPLAY` to compile the keyboard for use.
---------
-
-More resources:
-https://unix.stackexchange.com/questions/12072/how-do-i-get-current-keyboard-layout
-http://pascal.tsu.ru/en/xkb/internals.html#key-mods
-https://cs.gmu.edu/~sean/stuff/n800/keyboard/old.html
-http://pascal.tsu.ru/en/xkb/gram-action.html
-https://askubuntu.com/questions/510024/what-are-the-steps-needed-to-create-new-keyboard-layout-on-ubuntu
-http://michal.kosmulski.org/computing/articles/custom-keyboard-layouts-xkb.html
-https://help.ubuntu.com/community/Custom%20keyboard%20layout%20definitions?action=show&redirect=Howto%3A+Custom+keyboard+layout+definitions
-
-----------
-Unity Dash breaks after compiling custom keymap with xkbcomp - arrows cause it to disappear. Supend/resume allows it to work again. (?!)
+Attempts to do this at the user level had disadvantages:
+- The Unity Dash disappeared when pressing arrow keys, until suspend/resume
+- Switching to a different TTY and back (Ctrl-Alt-F1/F7 for example) knocked out the user keymap
