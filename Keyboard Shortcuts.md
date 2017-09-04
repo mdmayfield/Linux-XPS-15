@@ -198,3 +198,10 @@ xset r 116 #Down
 Attempts to do this at the user level had disadvantages:
 - The Unity Dash disappeared when pressing arrow keys, until suspend/resume
 - Switching to a different TTY and back (Ctrl-Alt-F1/F7 for example) knocked out the user keymap
+
+## OS Keyboard Shortcut changes
+- Set Ctrl-Tab and Ctrl-\` for application switching
+
+## AutoKey
+AutoKey has the useful behavior that, for the redirected arrow keys, it listens for the original unaltered modifiers, not xkb's remaps, so we can use it to finish the Mac-like shortcut experience.
+
