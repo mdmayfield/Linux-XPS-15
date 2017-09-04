@@ -86,3 +86,4 @@ xkb_symbols "swap_mac_style" {
     replace key <RCTL> { [ Super_R ] };
 };
 ```
+But these changes have not yet had the desired effect, and `sudo dpkg-reconfigure` seems to wipe them out. I'm looking for the script that generates these.
