@@ -58,3 +58,13 @@ https://www.mail-archive.com/i18n@xfree86.org/msg01867.html
 
 --------
 For user-level keyboard switching, put home/.xkb/\* into ~, and run `xkbcomp -I$HOME/.xkb ~/.xkb/keymap/mm-custom-keys $DISPLAY` to compile the keyboard for use.
+--------
+
+More resources:
+https://unix.stackexchange.com/questions/12072/how-do-i-get-current-keyboard-layout
+http://pascal.tsu.ru/en/xkb/internals.html#key-mods
+https://cs.gmu.edu/~sean/stuff/n800/keyboard/old.html
+http://pascal.tsu.ru/en/xkb/gram-action.html
+https://askubuntu.com/questions/510024/what-are-the-steps-needed-to-create-new-keyboard-layout-on-ubuntu
+http://michal.kosmulski.org/computing/articles/custom-keyboard-layouts-xkb.html
+https://help.ubuntu.com/community/Custom%20keyboard%20layout%20definitions?action=show&redirect=Howto%3A+Custom+keyboard+layout+definitions
