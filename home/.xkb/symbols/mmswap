@@ -22,8 +22,8 @@ xkb_symbols "swap_mac_style_arrows" {
 
     key <LEFT> {
       type = "CMD_OPT_HELD",
-      symbols[Group1] = [ Left, Left, Left, Left, Left ],
-      actions[Group1] = [ NoAction(), NoAction(),
+      symbols[Group1] = [ Left, Left, Left, Left ],
+      actions[Group1] = [ NoAction(),
          RedirectKey(key=<LEFT>,clearmods=Control+Mod1,modifiers=Control),
          RedirectKey(key=<LEFT>,clearmods=Control+Mod1,modifiers=Mod1),
          NoAction() ]
@@ -31,8 +31,8 @@ xkb_symbols "swap_mac_style_arrows" {
 
     key <RGHT> {
       type = "CMD_OPT_HELD",
-      symbols[Group1] = [ Right, Right, Right, Right, Right ],
-      actions[Group1] = [ NoAction(), NoAction(),
+      symbols[Group1] = [ Right, Right, Right, Right ],
+      actions[Group1] = [ NoAction(),
          RedirectKey(key=<RGHT>,clearmods=Control+Mod1,modifiers=Control),
          RedirectKey(key=<RGHT>,clearmods=Control+Mod1,modifiers=Mod1),
          NoAction() ]
@@ -40,8 +40,8 @@ xkb_symbols "swap_mac_style_arrows" {
 
     key <UP> {
       type = "CMD_OPT_HELD",
-      symbols[Group1] = [ Up, Up, Up, Up, Up ],
-      actions[Group1] = [ NoAction(), NoAction(),
+      symbols[Group1] = [ Up, Up, Up, Up ],
+      actions[Group1] = [ NoAction(),
          RedirectKey(key=<UP>,clearmods=Control+Mod1,modifiers=Control),
          RedirectKey(key=<UP>,clearmods=Control+Mod1,modifiers=Mod1),
          NoAction() ]
@@ -49,8 +49,8 @@ xkb_symbols "swap_mac_style_arrows" {
 
     key <DOWN> {
       type = "CMD_OPT_HELD",
-      symbols[Group1] = [ Down, Down, Down, Down, Down ],
-      actions[Group1] = [ NoAction(), NoAction(),
+      symbols[Group1] = [ Down, Down, Down, Down ],
+      actions[Group1] = [ NoAction(),
          RedirectKey(key=<DOWN>,clearmods=Control+Mod1,modifiers=Control),
          RedirectKey(key=<DOWN>,clearmods=Control+Mod1,modifiers=Mod1),
          NoAction() ]
