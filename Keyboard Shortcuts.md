@@ -55,3 +55,34 @@ https://unix.stackexchange.com/questions/236089/transparently-mapping-a-modified
 https://www.mail-archive.com/i18n@xfree86.org/msg01867.html
 
 ** https://stackoverflow.com/questions/32822857/how-to-emulate-integrated-numeric-keypad-cursor-keys-in-linux **
+
+--------
+Diving deep into xkb configuration. For an experiment, adding "Mac style modifiers" as an option. (Maps Alt = Ctrl, Win = Opt/Alt, Ctrl = Win, on both sides of KB). Had to edit in /usr/share/X11/xkb/rules:
+
+- In `evdev.xml`:
+```
+     <option>
+       <configItem>
+         <name>ctrl:swap_mac_style</name>
+         <description>Mac Style Modifiers</description>
+       </configItem>
+     </option>
+```
+- In `base`:
+```
+  ctrl:swap_mac_style  =       +ctrl(swap_mac_style)
+```
+
+The actual effect of this option is defined in `/usr/share/X11/xkb/symbols/ctrl`, where I added:
+```
+// Mac-style modifiers
+partial modifier_keys
+xkb_symbols "swap_mac_style" {
+    replace key <LALT> { [ Control_L, Control_L ] };
+    replace key <LWIN> { [ Alt_L, Meta_L ] };
+    replace key <LCTL> { [ Super_L ] };
+    replace key <RALT> { [ Control_R, Control_R ] };
+    replace key <RWIN> { [ Alt_R, Meta_R ] };
+    replace key <RCTL> { [ Super_R ] };
+};
+```
