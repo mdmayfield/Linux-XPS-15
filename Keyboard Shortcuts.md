@@ -68,3 +68,6 @@ http://pascal.tsu.ru/en/xkb/gram-action.html
 https://askubuntu.com/questions/510024/what-are-the-steps-needed-to-create-new-keyboard-layout-on-ubuntu
 http://michal.kosmulski.org/computing/articles/custom-keyboard-layouts-xkb.html
 https://help.ubuntu.com/community/Custom%20keyboard%20layout%20definitions?action=show&redirect=Howto%3A+Custom+keyboard+layout+definitions
+
+----------
+Unity Dash breaks after compiling custom keymap with xkbcomp - arrows cause it to disappear. Supend/resume allows it to work again. (?!)
