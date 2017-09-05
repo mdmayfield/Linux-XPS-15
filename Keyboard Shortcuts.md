@@ -52,7 +52,15 @@ xkb_symbols "pc105" {
     include "pc(editing)"
     include "keypad(x11)"
 
-    key <BKSP> {	[ BackSpace, BackSpace	]	};
+//    key <BKSP> {	[ BackSpace, BackSpace	]	};
+    key <BKSP> {
+      type = "CMD_OPT_HELD",
+      symbols[Group1] = [ BackSpace, BackSpace, BackSpace, BackSpace ],
+      actions[Group1] = [ NoAction(),
+         RedirectKey(key=<BKSP>,clearmods=Control+Mod1,modifiers=Control),
+         RedirectKey(key=<BKSP>,clearmods=Control+Mod1,modifiers=Mod1),
+         NoAction() ]
+    };
 
     key  <TAB> {	[ Tab,	ISO_Left_Tab	]	};
     key <RTRN> {	[ Return		]	};
@@ -193,6 +201,7 @@ xset r 113 #Left
 xset r 114 #Right
 xset r 111 #Up
 xset r 116 #Down
+xset r 22  #Backspace
 ```
 
 Attempts to do this at the user level had disadvantages:
