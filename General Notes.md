@@ -14,6 +14,7 @@ xinput set-prop "DLL06E4:01 06CB:7A13 Touchpad" "Coordinate Transformation Matri
 xinput set-prop "DLL06E4:01 06CB:7A13 Touchpad" "libinput Accel Speed" 0.75
 xinput set-prop "DLL06E4:01 06CB:7A13 Touchpad" "libinput Tapping Enabled" 1
   ```
+  - Use AutoKey shortcuts as listed in this repo
 2. Modifier Keys
   - Use changes as outlined in `Keyboard Shortcuts.md`
   - TODO: Make this a switchable keyboard profile instead of edits to system files
