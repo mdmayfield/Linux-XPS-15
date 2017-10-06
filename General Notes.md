@@ -7,7 +7,10 @@ These are reminders to myself of what to do to set up Ubuntu on my XPS 15 to my 
      - Allowing clickpad click to count even with no fingers sensed
      - Immediately counting any touch in button area as a thumb (reduces sporadic clicks)
      - Decreasing cursor jump threshold to eliminate jumps after 1-second delay
-     - Scaling the overall speed of the touchpad way down (to allow greater acceleration)
+     - Scaling the overall speed of the touchpad way down
+        - To combine with Accel Speed at maximum
+        - This allows for much greater precision (acceleration + deceleration)
+        - It also fixes (slows) the scrolling speed as a bonus!
   - Add these settings in .xsessionrc:
   ```
 # For Libinput driver
