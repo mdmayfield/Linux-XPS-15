@@ -15,6 +15,7 @@ xinput set-prop "DLL06E4:01 06CB:7A13 Touchpad" "libinput Accel Speed" 0.75
 xinput set-prop "DLL06E4:01 06CB:7A13 Touchpad" "libinput Tapping Enabled" 1
   ```
   - Unfortunately this causes a problem with drag-and-drop: the cursor jumps when the coordinate transformation matrix is set to this instead of 1 0 0 0 1 0 0 0 1.
+  - For now I'm trying without the transformation matrix and with accel speed 0.33 instead.
   - Use AutoKey shortcuts as listed in this repo
 2. Modifier Keys
   - Use changes as outlined in `Keyboard Shortcuts.md`
