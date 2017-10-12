@@ -22,6 +22,9 @@ xinput set-prop "DLL06E4:01 06CB:7A13 Touchpad" "libinput Tapping Enabled" 1
   - Use changes as outlined in `Keyboard Shortcuts.md`
   - TODO: Make this a switchable keyboard profile instead of edits to system files
   - TODO: Create a virtual keypad from m,. jkl uio 789
+    - Note that Fn + (physical) LWin = RWin
+    - (physical) LWin + Fn still = physical LWin/logical LAlt
+    - RWin would make a perfect number pad
 
 3. Email: Thunderbird
 4. Calendar: MineTime
