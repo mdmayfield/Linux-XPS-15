@@ -5,3 +5,5 @@ Minimum xrun-free JACK buffer size with standard Ubuntu lowlatency kernel: 256 s
 Mainly followed instructions from http://kernel-notes.gbittencourt.net/compiling-preempt-rt/
 - Don't bother setting LOCAL_VERSION=rt3 since the existing version is already rt3 and it'll become -rt3-rt3
 - By default debug is enabled which takes much longer. https://ubuntuforums.org/showthread.php?t=2266609 scripts/config --disable DEBUG_INFO
+
+Realtime kernel made no difference after compiling. Still can't get lower than 256 x 2 buffer without constant xruns.
