@@ -100,6 +100,6 @@ Comment=
 - For some reason the original caused the Unity Dash to quit whenever I hit an arrow key. Resolved by redirecting the base key and clearing mods. Not sure why but glad it works.
 - Set up two keyboard shortcuts in the Ubuntu GUI:
 
-1. Switch to PC Modifiers - command `setxkbmap` - shortcut Super-Esc (physical Ctrl-Esc)
-2. Switch to Mac Modifiers - command `xkbcomp $HOME/.xkb/custom $DISPLAY` - shortcut Ctrl-Esc (physical Ctrl-Esc when in PC Modifiers mode)
+1. Switch to PC Modifiers - command `setxkbmap` - shortcut "Ctrl-Multikey" (Fn + phys Alt + RCtrl/Menu)
+2. Switch to Mac Modifiers - command `xkbcomp $HOME/.xkb/custom $DISPLAY` - shortcut "Alt-Menu" (Fn + phys Alt + RCtrl/Menu)
 - Esc doesn't seem to be recognized. Need something else
