@@ -30,10 +30,19 @@ xkb_keymap {
 		replace key <RALT> { [ Control_R, Control_R ] };
 		replace key <RCTL> { [ Alt_R ] };
 
+	   replace key <BKSP> {
+	      type = "CMD_OPT_HELD",
+	      symbols[Group1] = [ BackSpace, BackSpace, BackSpace, BackSpace ],
+	      actions[Group1] = [ RedirectKey(key=<BKSP>,clearmods=Control+Mod1),
+		 RedirectKey(key=<BKSP>,clearmods=Control+Mod1,modifiers=Control),
+		 RedirectKey(key=<BKSP>,clearmods=Control+Mod1,modifiers=Mod1),
+		 NoAction() ]
+	    };
+
             replace key <UP> {
 	      type = "CMD_OPT_HELD",
 	      symbols[Group1] = [ Up, Up, Up, Up ],
-	      actions[Group1] = [ NoAction(),
+	      actions[Group1] = [ RedirectKey(key=<UP>,clearmods=Control+Mod1),
 		 RedirectKey(key=<UP>,clearmods=Control+Mod1,modifiers=Control),
 		 RedirectKey(key=<UP>,clearmods=Control+Mod1,modifiers=Mod1),
 		 NoAction() ]
@@ -42,7 +51,7 @@ xkb_keymap {
 	    replace key <LEFT> {
 	      type[Group1] = "CMD_OPT_HELD",
 	      symbols[Group1] = [ Left, Left, Left, Left ],
-	      actions[Group1] = [ NoAction(),
+	      actions[Group1] = [ RedirectKey(key=<LEFT>,clearmods=Control+Mod1),
 		 RedirectKey(key=<LEFT>,clearmods=Control+Mod1,modifiers=Control),
 		 RedirectKey(key=<LEFT>,clearmods=Control+Mod1,modifiers=Mod1),
 		 NoAction() ]
@@ -51,7 +60,7 @@ xkb_keymap {
 	    replace key <DOWN> {
 	      type = "CMD_OPT_HELD",
 	      symbols[Group1] = [ Down, Down, Down, Down ],
-	      actions[Group1] = [ NoAction(),
+	      actions[Group1] = [ RedirectKey(key=<DOWN>,clearmods=Control+Mod1),
 		 RedirectKey(key=<DOWN>,clearmods=Control+Mod1,modifiers=Control),
 		 RedirectKey(key=<DOWN>,clearmods=Control+Mod1,modifiers=Mod1),
 		 NoAction() ]
@@ -60,7 +69,7 @@ xkb_keymap {
 	    replace key <RGHT> {
 	      type = "CMD_OPT_HELD",
 	      symbols[Group1] = [ Right, Right, Right, Right ],
-	      actions[Group1] = [ NoAction(),
+	      actions[Group1] = [ RedirectKey(key=<RGHT>,clearmods=Control+Mod1),
 		 RedirectKey(key=<RGHT>,clearmods=Control+Mod1,modifiers=Control),
 		 RedirectKey(key=<RGHT>,clearmods=Control+Mod1,modifiers=Mod1),
 		 NoAction() ]
@@ -69,6 +78,23 @@ xkb_keymap {
 	};
 	xkb_geometry  { include "pc(pc105)"	};
 };
+
 ```
 
-Then to activate, use `xkbcomp $HOME/.xkb/custom $DISPLAY`. Will put this in .xsessionrc and use it and `setxkbmap` to toggle between regular modifiers (for VMs etc) and preferred Mac modifiers (for general use).
+Then to activate, use `xkbcomp $HOME/.xkb/custom $DISPLAY`. Notes:
+
+- Doesn't work in .xsessionrc. Had to put in `~/.config/autostart/xkbcomp.desktop` containing:
+```
+[Desktop Entry]
+Type=Application
+Exec=/bin/bash -c 'sleep 3; xkbcomp $HOME/.xkb/custom $DISPLAY'
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=Custom Keyboard Map
+Name=Custom Keyboard Map
+Comment[en_US]=
+Comment=
+```
+
+- For some reason the original caused the Unity Dash to quit whenever I hit an arrow key. Resolved by redirecting the base key and clearing mods. Not sure why but glad it works.
