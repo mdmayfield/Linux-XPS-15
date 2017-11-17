@@ -18,6 +18,7 @@ xinput set-prop "DLL06E4:01 06CB:7A13 Touchpad" "libinput Accel Speed" 1
 xinput set-prop "DLL06E4:01 06CB:7A13 Touchpad" "libinput Tapping Enabled" 1
   ```
   - Use AutoKey shortcuts as listed in this repo
+    - `ln -s /dev/null /home/mattmayfield/.config/autokey/autokey.log`
 2. Modifier Keys
   - Use changes as outlined in `Keyboard Shortcuts.md`
   - TODO: Make this a switchable keyboard profile instead of edits to system files
