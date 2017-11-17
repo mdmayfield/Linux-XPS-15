@@ -4,12 +4,15 @@
 This assumes regular vanilla Ubuntu 16.04 LTS. I installed (off a 4GB SD card, of all things) without downloading updates during installation, and without proprietary drivers or Flash (ecch) etc. Note that my XPS 15 has a Broadcom wireless chipset, not the "killer" brand one that apparently a few XPSes do.
 
 ## Making the Touchpad Better
-It still isn't 100% reliable and trustworthy like a MBP trackpad on MacOS / OS X, and there is no thumb rejection so you can't rest your thumb on the button area. :-( But the phantom taps can be mostly fixed, the right-click soft button area can be shrunk for convenience, and a few other tweaks can make it a bit more useful.
-
-- Create a .xessionrc file in ~ as per [the one saved here](  home/.xsessionrc  ).
-- Files starting with . are hidden. View Hidden Files in the GUI or use `ls -a` to see them
-- Changes will take effect after X11 restarts (reboot, logout/login, etc.)
-- Or, open a terminal and `. .xsessionrc` to activate immediately
+Using my fork of https://github.com/mdmayfield/libinput
+and these lines in .xsessionrc:
+```
+xinput set-prop "DLL06E4:01 06CB:7A13 Touchpad" "libinput Accel Speed" 1
+xinput set-prop "DLL06E4:01 06CB:7A13 Touchpad" "libinput Tapping Enabled" 1
+```
+The main things I'd like to improve from here are:
+- 100% reliably reject palm/thumb touched that rest instead of counting them as touch & release
+- Allow for two-finger scrolling while dragging
 
 ## Enabling Bluetooth
 Out-of-the-box, Ubuntu 16.04.3 at least doesn't work properly with my XPS 15's Bluetooth. YMMV. Apparently, as mentioned on the [Ubuntu forums](https://ubuntuforums.org/showthread.php?t=2317843), there is a missing firmware file.
