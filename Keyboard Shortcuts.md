@@ -224,3 +224,4 @@ setxkbmap -option ctrl:swap_lalt_lctl_lwin
 setxkbmap -option ctrl:ralt_rctrl
 setxkbmap -option ctrl:rctrl_ralt
 ```
+Note that these too are lost when switching terminals. I notice that the compose:menu option remains, though, which I seem to recall setting in the GUI somewhere.
