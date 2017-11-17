@@ -102,3 +102,4 @@ Comment=
 
 1. Switch to PC Modifiers - command `setxkbmap` - shortcut Super-Esc (physical Ctrl-Esc)
 2. Switch to Mac Modifiers - command `xkbcomp $HOME/.xkb/custom $DISPLAY` - shortcut Ctrl-Esc (physical Ctrl-Esc when in PC Modifiers mode)
+- Esc doesn't seem to be recognized. Need something else
