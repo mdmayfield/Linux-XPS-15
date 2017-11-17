@@ -102,4 +102,3 @@ Comment=
 
 1. Switch to PC Modifiers - command `setxkbmap` - shortcut "Ctrl-Multikey" (Fn + phys Alt + RCtrl/Menu)
 2. Switch to Mac Modifiers - command `xkbcomp $HOME/.xkb/custom $DISPLAY` - shortcut "Alt-Menu" (Fn + phys Alt + RCtrl/Menu)
-- Esc doesn't seem to be recognized. Need something else
