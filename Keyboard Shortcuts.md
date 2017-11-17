@@ -214,3 +214,13 @@ Attempts to do this at the user level had disadvantages:
 ## AutoKey
 AutoKey has the useful behavior that, for the redirected arrow keys, it listens for the original unaltered modifiers, not xkb's remaps, so we can use it to finish the Mac-like shortcut experience.
 
+----
+
+# Update 2017-10-16
+
+A large part of this (not the arrow key and backspace modifier swaps yet) can be done OOTB with:
+```
+setxkbmap -option ctrl:swap_lalt_lctl_lwin
+setxkbmap -option ctrl:ralt_rctrl
+setxkbmap -option ctrl:rctrl_ralt
+```
