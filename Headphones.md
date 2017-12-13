@@ -1,4 +1,27 @@
 # Headphones
+
+Lost headphones at one point; this helped:
+```
+1) Install:
+sudo apt-get install alsa-tools-gui
+
+2) Launch:
+hdajackretask
+
+3) Check 'Show unconnected pins'
+
+4) Check "override" on 0x21.
+
+5) Apply; test sound.
+
+6) If everything all is good now, press "install boot override"
+```
+
+From https://www.mail-archive.com/search?l=ubuntu-bugs@lists.ubuntu.com&q=subject:%22%5C%5BBug+1575078%5C%5D+Re%5C%3A+%5C%5BXPS+15+9550%2C+Realtek+ALC3266%5C%5D+Headphone+jack+stops+working+after+a+while%22&o=newest&f=1
+
+
+---
+
 At first try, plugging in headphones made Alsamixer do all the correct stuff around muting the speakers and un-muting the headphone jack, and Unity brought up a dialog asking if I had plugged in headphones, a headset, or speakers. But no sound came from the headphones.
 
 I'm trying this: https://ubuntuforums.org/showthread.php?t=2332503
