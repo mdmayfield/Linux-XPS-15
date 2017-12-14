@@ -1,6 +1,10 @@
 # Headphones
 
-Lost headphones at one point; this helped:
+Most recently, after losing headphones I restarted and went into EFI Setup and disabled the internal speakers. Started up again, tested headphones (worked), restarted into EFI and re-enabled speakers, then started up again (w/headphones connected in case that matters), and everything went back to working.
+
+---
+
+Lost headphones at one point; though this would help but then it went back to not working:
 ```
 1) Install:
 sudo apt-get install alsa-tools-gui
