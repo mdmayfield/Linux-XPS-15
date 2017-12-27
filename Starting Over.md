@@ -16,7 +16,7 @@ echo '/usr/local/lib/x86_64-linux-gnu' | sudo tee -a usr-local-lib.conf
 sudo ldconfig
 ```
 
-# Add to .xsessionrc
+## Add to .xsessionrc
 ```
 #!/bin/sh
 
@@ -35,3 +35,5 @@ xinput set-prop "DLL06E4:01 06CB:7A13 Touchpad" "libinput Click Method Enabled" 
 xbanish -i Shift -i Control -i mod1 -i mod4 &
 ```
 Then set the mouse control panel for horizontal scrolling allowed, no vertical edge scrolling, and max acceleration
+
+`gsettings set com.solus-project.brisk-menu label-visible false` to hide "Menu" from Brisk Menu
