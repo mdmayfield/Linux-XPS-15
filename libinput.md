@@ -12,6 +12,6 @@ sudo ninja install -C builddir
 
 # set up library path to include /usr/local/lib/x86_64-linux-gnu/. Otherwise the custom version will never be loaded.
 cd /etc/ld.so.conf.d
-echo '/usr/local/lib' | sudo tee -a usr-local-lib.conf
+echo '/usr/local/lib/x86_64-linux-gnu' | sudo tee -a usr-local-lib.conf
 sudo ldconfig
 ```
