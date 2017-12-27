@@ -34,3 +34,4 @@ xinput set-prop "DLL06E4:01 06CB:7A13 Touchpad" "libinput Click Method Enabled" 
 # Hide mouse cursor while typing
 xbanish -i Shift -i Control -i mod1 -i mod4 &
 ```
+Then set the mouse control panel for horizontal scrolling allowed, no vertical edge scrolling, and max acceleration
