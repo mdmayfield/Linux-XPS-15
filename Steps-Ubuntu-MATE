@@ -1,0 +1,53 @@
+Mutiny layout
+Enable source code in Software Sources
+sudo apt build-dep libinput
+sudo apt install ninja-build meson doxygen graphviz libgtk-3-dev check valgrind libunwind-dev
+cd ~/Developer/libinput
+meson . builddir
+ninja -C builddir
+sudo ninja install -C builddir
+# set up library path to include /usr/local/lib/x86_64-linux-gnu/. Otherwise the custom version will never be loaded.
+cd /etc/ld.so.conf.d
+echo '/usr/local/lib' | sudo tee -a usr-local-lib.conf
+sudo ldconfig
+--------------
+
+
+sudo apt install autokey-gtk git
+git config --global user.email "mdmayfield@users.noreply.github.com"
+git config --global user.name "Matt Mayfield"
+cd ~/.config
+git clone https://github.com/mdmayfield/autokey.git
+cd ~
+git clone https://github.com/mdmayfield/xkb.git .xkb
+#Set up AutoKey to run at startup with GUI
+#Use command in command-reference for modifier swap etc.
+
+
+----------------
+
+Problem: MATE seems to intercept modifier keys before everything else, so that keyboard shortcuts for things like the HUD are triggering on the wrong (as-labeled) keys instead of the customized ones.
+
+Solution trial 1: change HUD hotkey to Menu (Fn+R_Ctrl). `gsettings set org.mate.hud shortcut 'Menu'`
+
+----------------
+
+Problem: indicators keep crashing/become unresponsives
+
+Solution trial 1: Swap out "indicator applet complete" from menubar (top panel) with regular "indicator applet" ---- didn't resolve
+
+----------------
+
+sudo apt install compiz-plugins-extra
+
+
+
+
+
+
+
+-----to save git credentials
+git config credential.helper store
+git push
+
+
