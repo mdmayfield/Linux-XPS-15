@@ -15,7 +15,7 @@
 - Allow two-finger scrolling while button is held down
 
 # Not Possible
-- Eliminate spurious tap when palm rests solidly (or workaround: properly enable disable while typing)
+- Eliminate spurious tap when palm rests solidly
   - This appears to be hardware/firmware stupidity courtesy of Dell or their touchpad OEM
   - Behavior shows up even in EFI "BIOS" GUI pre-OS boot
   - Some kind of misguided palm detection, implemented beneath the Linux kernel (in touchpad apparently)
@@ -28,3 +28,4 @@
   - Register a touch, realize it's a thumb, post a release
   - So a physical click would count as a double-click if tap-to-click is on (one tap, one physical)
   - The devs then added an "ultimate moron" layer on top of the stupidity that was already there, by not counting physical presses if the thumb "detection" is triggered
+  - Even worse, when tap-to-click is off in the OS, many thumb physical button presses simply don't register
