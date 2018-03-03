@@ -23,6 +23,7 @@ https://docs.microsoft.com/en-us/windows-hardware/design/component-guidelines/to
 https://github.com/torvalds/linux/blob/master/drivers/hid/hid-multitouch.c#L58
 
 /* quirks to control the device */
+```
 #define MT_QUIRK_NOT_SEEN_MEANS_UP	BIT(0)
 #define MT_QUIRK_SLOT_IS_CONTACTID	BIT(1)
 #define MT_QUIRK_CYPRESS		BIT(2)
@@ -41,3 +42,4 @@ https://github.com/torvalds/linux/blob/master/drivers/hid/hid-multitouch.c#L58
 #define MT_QUIRK_TOUCH_SIZE_SCALING	BIT(15)
 #define MT_QUIRK_STICKY_FINGERS		BIT(16)
 #define MT_QUIRK_ASUS_CUSTOM_UP		BIT(17)
+```
