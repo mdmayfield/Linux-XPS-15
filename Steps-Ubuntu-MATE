@@ -51,3 +51,4 @@ git config credential.helper store
 git push
 
 
+---- Super-S key doesn't work in Compiz; see https://askubuntu.com/questions/42210/expo-shortcut-supers-doesnt-work-in-classic-desktop
