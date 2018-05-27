@@ -1,0 +1,5 @@
+- Pluma to Classic color scheme
+- Compiz edge flip binding top -> none
+- xkb from 16.04, AutoKey
+- xbanish
+- build latest libinput
