@@ -2,4 +2,6 @@
 - Compiz edge flip binding top -> none
 - xkb from 16.04, AutoKey
 - xbanish
-- build latest libinput
+- build latest libinput fork
+- purge fcitx and libfcitx-* (this might be what's crashing indicator-applet-complete, not sure yet)
+- file issue for indicator-applet about hardcoded keybindings interfering with Compiz (super-m, super-s)
