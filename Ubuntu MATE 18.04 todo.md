@@ -5,3 +5,4 @@
 - build latest libinput fork
 - purge fcitx and libfcitx-* (this might be what's crashing indicator-applet-complete, not sure yet)
 - file issue for indicator-applet about hardcoded keybindings interfering with Compiz (super-m, super-s)
+- Create ~/.config/gtk-3.0/settings.ini and add `[Settings]     gtk-primary-button-warps-slider = false`
