@@ -5,6 +5,10 @@
 - Wiped internal SSD and installed Ubuntu MATE 18.04
 - `sudo apt update`; `sudo apt upgrade`
 - `sudo apt remove gstreamer1.0-fluendo-mp3` - apparently this is an inferior MP3 decoder, which causes issues with sound quality, and `gstreamer1.0-plugins-ugly` is already capable of playing mp3s.
+- `sudo apt install tlp tlp-rdw powertop`; `sudo tlp start`
+  - Need to run `sudo powertop` for quite some time on battery power to get a reading
+  - After this, `sudo powertop --auto-tune`
+  - Note while doing this - powertop is showing only around 4 watts discharge when idle. Better than I usually saw in 16.04; maybe newer kernel helps?
 
 ## To Do:
 
