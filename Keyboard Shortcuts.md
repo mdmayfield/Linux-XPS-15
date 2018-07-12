@@ -1,5 +1,10 @@
 # Keyboard Shortcuts
 
+Update 2018-07-12:
+
+It's possible to get most (not all) of the below functionality using out-of-the-box GUI settings in Ubuntu MATE 18.04. `Keyboard Preferences` -> `Layouts` tab -> `Options` then set `Alt/Win Key Behavior` -> `Ctrl is mapped to Alt; Alt is mapped to Win` and also set `Ctrl position` -> `Right Ctrl as Right Alt`.
+
+
 Update 2017-11-16:
 
 No need for replacing system-level files. Instead, just need to place this in arbitrary place in home directory (I'm using `~/.xkb/custom`):
