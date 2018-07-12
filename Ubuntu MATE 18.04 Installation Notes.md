@@ -14,6 +14,7 @@
   - `mkdir ~/Developer`; `cd ~/Developer`; `git clone https://github.com/mdmayfield/xbanish.git`; `cd xbanish`
   - `make` xbanish then `sudo cp xbanish /usr/local/bin/`
   - To run: `xbanish -i Shift -i Control -i mod1 -i mod4 &` and put that line in `~/.xsessionrc` to run at startup
+- Create ~/.config/gtk-3.0/settings.ini and add `[Settings]     gtk-primary-button-warps-slider = false` because Gtk3 breaks scroll bars (how did anyone think this was a good idea?)
 
 ## To Do:
 
@@ -21,8 +22,6 @@
 - Mutiny or Cupertino layout
 - Report (diagnose?) bug: in Firefox, highlighted text has tops cut off of letters
 - Set up Compiz, eliminate all screen tearing, fix top edge flipping shortcut
-- Set up xbanish for getting the cursor out of the way of text
-- Create ~/.config/gtk-3.0/settings.ini and add `[Settings]     gtk-primary-button-warps-slider = false` because Gtk3 breaks scroll bars (how did anyone think this was a good idea?)
 - Set up my own libinput fork (perhaps rebase it on latest)
 - Look into kernel patch for Confidence bit on touchpad, or maybe just turn off HW palm detection (Confidence quirk in hid-multitouch)
 - Set up keyboard customization, xkb layout and autokey
