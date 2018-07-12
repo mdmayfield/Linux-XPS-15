@@ -15,6 +15,9 @@
   - `make` xbanish then `sudo cp xbanish /usr/local/bin/`
   - To run: `xbanish -i Shift -i Control -i mod1 -i mod4 &` and put that line in `~/.xsessionrc` to run at startup
 - Create ~/.config/gtk-3.0/settings.ini and add `[Settings]     gtk-primary-button-warps-slider = false` because Gtk3 breaks scroll bars (how did anyone think this was a good idea?)
+- Turn off Super key to open menu in preparation for keyboard layout shenanigans:
+``gsettings set org.mate.mate-menu hot-key ''
+gsettings set com.solus-project.brisk-menu hot-key ''``
 
 ## To Do:
 
