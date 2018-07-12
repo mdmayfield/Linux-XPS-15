@@ -18,4 +18,5 @@
 - Set up my own libinput fork (perhaps rebase it on latest)
 - Look into kernel patch for Confidence bit on touchpad, or maybe just turn off HW palm detection (Confidence quirk in hid-multitouch)
 - Set up keyboard customization, xkb layout and autokey
-- Install software and import from backup of ~ on a case-by-case basis (Thunderbird and Firefox profiles mostly)
+- Install software and import from backup of ~ on a case-by-case basis (Thunderbird and Firefox profiles, VirtualBox machines)
+- Set up KXStudio and determine if lowlatency or realtime kernel is needed
