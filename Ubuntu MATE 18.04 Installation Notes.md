@@ -13,7 +13,6 @@
 ## To Do:
 
 - Follow https://gist.github.com/tomwwright/f88e2ddb344cf99f299935e1312da880 for nVidia stuff
-- TLP and PowerTop from same gist
 - Mutiny or Cupertino layout
 - Report (diagnose?) bug: in Firefox, highlighted text has tops cut off of letters
 - Set up Compiz, eliminate all screen tearing, fix top edge flipping shortcut
