@@ -1,0 +1,95 @@
+xkb_keymap {
+	xkb_keycodes  { include "evdev+aliases(qwerty)"	};
+	xkb_types     { include "complete"	
+		type "CMD_OPT_HELD" {
+		  modifiers = Alt+Control;
+		  map[None] = Level1;
+		  map[Alt] = Level2;
+		  map[Control] = Level3;
+		  map[Alt+Control] = Level4;
+		  level_name[Level1] = "Base";
+		  level_name[Level2] = "Alt";
+		  level_name[Level3] = "Control";
+		  level_name[Level4] = "Alt+Control";
+		};
+	};
+	xkb_compat    { include "complete"	};
+	xkb_symbols   { include "pc+us+inet(evdev)+compose(menu)+level3(ralt_switch)"	
+
+		// MM custom modifiers for XPS 15
+		replace key <LALT> { [ Control_L, Control_L ] };
+		replace key <LWIN> { [ Alt_L, Meta_L ] };
+		replace key <LCTL> { [ Super_L ] };
+		replace key <RALT> { [ Control_R, Control_R ] };
+		replace key <RCTL> { [ Alt_R ] };
+
+		// keypad enable
+		replace key <RWIN> { [ ISO_Level3_Shift ] };
+
+
+	   replace key <BKSP> {
+	      type = "CMD_OPT_HELD",
+	      symbols[Group1] = [ BackSpace, BackSpace, BackSpace, BackSpace ],
+	      actions[Group1] = [ RedirectKey(key=<BKSP>,clearmods=Control+Mod1),
+		 RedirectKey(key=<BKSP>,clearmods=Control+Mod1,modifiers=Control),
+		 RedirectKey(key=<BKSP>,clearmods=Control+Mod1,modifiers=Mod1),
+		 NoAction() ]
+	    };
+
+            replace key <UP> {
+	      type = "CMD_OPT_HELD",
+	      symbols[Group1] = [ Up, Up, Up, Up ],
+	      actions[Group1] = [ RedirectKey(key=<UP>,clearmods=Control+Mod1),
+		 RedirectKey(key=<UP>,clearmods=Control+Mod1,modifiers=Control),
+		 RedirectKey(key=<UP>,clearmods=Control+Mod1,modifiers=Mod1),
+		 NoAction() ]
+	    };
+
+	    replace key <LEFT> {
+	      type[Group1] = "CMD_OPT_HELD",
+	      symbols[Group1] = [ Left, Left, Left, Left ],
+	      actions[Group1] = [ RedirectKey(key=<LEFT>,clearmods=Control+Mod1),
+		 RedirectKey(key=<LEFT>,clearmods=Control+Mod1,modifiers=Control),
+		 RedirectKey(key=<LEFT>,clearmods=Control+Mod1,modifiers=Mod1),
+		 NoAction() ]
+	    };
+
+	    replace key <DOWN> {
+	      type = "CMD_OPT_HELD",
+	      symbols[Group1] = [ Down, Down, Down, Down ],
+	      actions[Group1] = [ RedirectKey(key=<DOWN>,clearmods=Control+Mod1),
+		 RedirectKey(key=<DOWN>,clearmods=Control+Mod1,modifiers=Control),
+		 RedirectKey(key=<DOWN>,clearmods=Control+Mod1,modifiers=Mod1),
+		 NoAction() ]
+	    };
+
+	    replace key <RGHT> {
+	      type = "CMD_OPT_HELD",
+	      symbols[Group1] = [ Right, Right, Right, Right ],
+	      actions[Group1] = [ RedirectKey(key=<RGHT>,clearmods=Control+Mod1),
+		 RedirectKey(key=<RGHT>,clearmods=Control+Mod1,modifiers=Control),
+		 RedirectKey(key=<RGHT>,clearmods=Control+Mod1,modifiers=Mod1),
+		 NoAction() ]
+	    };
+
+		// Numeric keypad
+
+		key <AE10> { [ 0, parenright, asterisk ] };
+
+		key <AD07> { [ u, U, 4 ] };
+		key <AD08> { [ i, I, 5 ] };
+		key <AD09> { [ o, O, 6 ] };
+		key <AD10> { [ p, P, minus ] };
+
+		key <AC07> { [ j, J, 1 ] };
+		key <AC08> { [ k, K, 2 ] };
+		key <AC09> { [ l, L, 3 ] };
+		key <AC10> { [ semicolon, colon, plus ] };
+
+		key <AB07> { [ m, M, 0 ] };
+
+
+	};
+	xkb_geometry  { include "pc(pc105)"	};
+};
+
