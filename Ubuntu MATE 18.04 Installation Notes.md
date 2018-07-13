@@ -84,4 +84,5 @@ gsettings set com.solus-project.brisk-menu hot-key ''``
 - Eliminate <Super>-S hotkey from mate-indicator-applet-complete (crashes when I press it? Also prevents Compiz from receiving the shortcut)
 - Manage other system keyboard shortcuts
 - Set up audio stuff
-  
+- Find a way to disable the annoying plug-in/unplug sound when the power adapter status changes
+
