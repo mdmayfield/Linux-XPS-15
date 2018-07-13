@@ -73,14 +73,15 @@ gsettings set com.solus-project.brisk-menu hot-key ''``
 - `sudo apt install autokey-gtk`; run Autokey, quit. Swap in `autokey/data` for `~/.config/autokey/data`
 - Replace ~/.mozilla/firefox folder with backup from previous installation
 - Add to ~/.profile: `# enable smooth scrolling in Firefox  \n  export MOZ_USE_XINPUT2=1` (doesn't take effect right away even if you . .profile; need to log out/in, or start FF from terminal while setting that var)
-- In `/etc/dbus-1/system.d/org.freedesktop.UPower.conf`, change `<allow send_destination="org.freedesktop.UPower" send_interface="org.freedesktop.UPower.KbdBacklight"/>` to `deny`. This keeps the keyboard backlight from constantly turning itself on randomly.
+- In `/etc/dbus-1/system.d/org.freedesktop.UPower.conf`, change `<allow send_destination="org.freedesktop.UPower" send_interface="org.freedesktop.UPower.KbdBacklight"/>` to `deny`.
+  - This keeps the keyboard backlight from constantly turning itself on randomly.
+  - Note that there are two similar entries; read carefully. On my install the correct one was near the end.
 
 
 ## To Do:
 
 - Follow https://gist.github.com/tomwwright/f88e2ddb344cf99f299935e1312da880 for nVidia stuff
 - Report (diagnose?) bug: in Firefox, highlighted text has tops cut off of letters
-- Prevent keyboard backlight from coming on all the time when I didn't ask for it
 - Set up my own libinput fork (perhaps rebase it on latest)
 - Set up libinput-gestures
 - Look into kernel patch for Confidence bit on touchpad, or maybe just turn off HW palm detection (Confidence quirk in hid-multitouch)
