@@ -25,6 +25,7 @@ gsettings set com.solus-project.brisk-menu hot-key ''``
 - Touchpad control panel - set up horiz + vert scrolling, and two- and three-finger click/tap. (will still tweak with xinput settings in .xsessionrc)
 - In MATE Tweak, select Cupertino layout, then (because I don't want the full-screen Brisk Menu): `gsettings set com.solus-project.brisk-menu window-type 'classic'`
 - Set Plank theme: Matte
+- Configure HUD: `gsettings set org.mate.hud shortcut '<Super>space'` then enable in MATE Tweak
 
 
 ## To Do:
