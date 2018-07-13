@@ -57,14 +57,23 @@ gsettings set com.solus-project.brisk-menu hot-key ''``
   s0_hsize = 3
   s0_vsize = 2
   ```
+  - In Desktop Wall:
+    - Turn off all four options in Bindings -> Edge Flipping. This fixes an issue with the Global Menu not rolling over on the top pixel of the screen.
+    - EXPERIMENTAL: In Viewport Switching, set Multimonitor behavior to Switch Separately
+  - In Expo ISSUE: currently <Super>s is swallowed by indicator-applet-complete. See To Do item. Temporary workaround: set shortcut to <Super>grave
+  - Disable Application Switcher, enable Static Application Switcher:
+    - Ctrl-Tab for next window (all windows), Ctrl-\` for previous window (all windows)
+    - Behavior turn off Auto Change Viewport
+    - Appearance Saturation/Brightness/Opacity each 60%
+  - Move Window: Initiate Window Move -> <Super><Alt>
+  - Grid: just <Super> not <Super><Control> for Left Maximize and Right Maximize. Top Maximize, Bottom do nothing.
+  
   
 
 ## To Do:
 
 - Follow https://gist.github.com/tomwwright/f88e2ddb344cf99f299935e1312da880 for nVidia stuff
-- Mutiny or Cupertino layout
 - Report (diagnose?) bug: in Firefox, highlighted text has tops cut off of letters
-- Set up Compiz, eliminate all screen tearing, fix top edge flipping shortcut
 - Set up my own libinput fork (perhaps rebase it on latest)
 - Look into kernel patch for Confidence bit on touchpad, or maybe just turn off HW palm detection (Confidence quirk in hid-multitouch)
 - Set up keyboard customization, xkb layout and autokey
