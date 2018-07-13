@@ -73,6 +73,8 @@ gsettings set com.solus-project.brisk-menu hot-key ''``
 - `sudo apt install autokey-gtk`; run Autokey, quit. Swap in `autokey/data` for `~/.config/autokey/data`
 - Replace ~/.mozilla/firefox folder with backup from previous installation
 - Add to ~/.profile: `# enable smooth scrolling in Firefox  \n  export MOZ_USE_XINPUT2=1` (doesn't take effect right away even if you . .profile; need to log out/in, or start FF from terminal while setting that var)
+- In `/etc/dbus-1/system.d/org.freedesktop.UPower.conf`, change `<allow send_destination="org.freedesktop.UPower" send_interface="org.freedesktop.UPower.KbdBacklight"/>` to `deny`. This keeps the keyboard backlight from constantly turning itself on randomly.
+
 
 ## To Do:
 
