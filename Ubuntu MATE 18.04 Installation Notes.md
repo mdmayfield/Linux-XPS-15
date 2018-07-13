@@ -78,7 +78,12 @@ gsettings set com.solus-project.brisk-menu hot-key ''``
   - Note that there are two similar entries; read carefully. On my install the correct one was near the end.
 - Disable the annoying sound when plugging in or unplugging the AC adapter: `gsettings set org.mate.power-manager enable-sound false`
 - Turn off terminal bell: MATE Terminal -> Edit -> Profile Preferences
-- Trying this to keep Bluetooth from turing on every restart: `gsettings set org.blueman.plugins.powermanager auto-power-on false`
+- Turn off Bluetooth at system startup: create `/etc/rc.local` and make it executable - systemd will run it. This is the same as doing "Turn Bluetooth Off" and it can be turned back on by the applet:
+  ```
+  #!/bin/bash
+  rfkill block bluetooth
+  exit 0
+  ```
 - Had to re-copy Bluetooth firmware to `/lib/firmware/brcm/`; see Bluetooth.md 
 
 ## To Do:
