@@ -21,7 +21,7 @@ gsettings set com.solus-project.brisk-menu hot-key ''``
 - Install extra codecs, fonts: `sudo apt install libavcodec-extra unrar`; `sudo apt install ttf-mscorefonts-installer`; `sudo apt install gstreamer1.0-libav gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly`
 - Set up printer (which was *ridiculously* easy; it was already automatically detected)
 - Go to Software Sources and enable Source Code repo
-
+- Set up Time And Date control panel to keep sync with Internet time servers. First `sudo apt install ntp` then change Control Panel. (Why on Earth don't they install ntp automatically, or at least give a newbie-friendly error message? I knew what to do but a new user wouldn't.)
 
 
 ## To Do:
