@@ -76,7 +76,8 @@ gsettings set com.solus-project.brisk-menu hot-key ''``
 - In `/etc/dbus-1/system.d/org.freedesktop.UPower.conf`, change `<allow send_destination="org.freedesktop.UPower" send_interface="org.freedesktop.UPower.KbdBacklight"/>` to `deny`.
   - This keeps the keyboard backlight from constantly turning itself on randomly.
   - Note that there are two similar entries; read carefully. On my install the correct one was near the end.
-
+- Disable the annoying sound when plugging in or unplugging the AC adapter: `gsettings set org.mate.power-manager enable-sound false`
+  
 
 ## To Do:
 
@@ -90,5 +91,4 @@ gsettings set com.solus-project.brisk-menu hot-key ''``
 - Custom brightness to go to 1 instead of 0
 - Eliminate <Super>-S hotkey from mate-indicator-applet-complete (crashes when I press it? Also prevents Compiz from receiving the shortcut)
 - Set up audio stuff
-- Find a way to disable the annoying plug-in/unplug sound when the power adapter status changes
 - Find a way to reduce the amount of logging that AutoKey does https://docs.python.org/2/library/logging.html  autokey/lib/autokey/gtkapp.py
