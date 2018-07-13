@@ -18,6 +18,9 @@
 - Turn off Super key to open menu in preparation for keyboard layout shenanigans:
 ``gsettings set org.mate.mate-menu hot-key ''
 gsettings set com.solus-project.brisk-menu hot-key ''``
+- Install extra codecs, fonts: `sudo apt install libavcodec-extra unrar`; `sudo apt install ttf-mscorefonts-installer`; `sudo apt install gstreamer1.0-libav gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly`
+
+
 
 ## To Do:
 
