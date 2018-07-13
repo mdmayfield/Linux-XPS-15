@@ -29,7 +29,7 @@ gsettings set com.solus-project.brisk-menu hot-key ''``
 - Configure HUD: `gsettings set org.mate.hud shortcut '<Super>space'` then enable in MATE Tweak
 - Set menubar clock to 12h and US units: right-click
 - `sudo apt install compizconfig-settings-manager` then choose Compiz as compositor from MATE Tweak
-- Compiz fixes/tweaks:
+- Compiz fixes/tweaks - install profile Linux-XPS-15/UbuntuMATE1804CompizDefaults180713.profile, or do these:
   - In Commands, Command line 1, remove `--interactive` so that Shift-PrintScreen doesn't show the unnecessary dialog.
   - In General Options, use:
   ```
