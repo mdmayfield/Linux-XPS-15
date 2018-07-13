@@ -28,7 +28,36 @@ gsettings set com.solus-project.brisk-menu hot-key ''``
 - Configure HUD: `gsettings set org.mate.hud shortcut '<Super>space'` then enable in MATE Tweak
 - Set menubar clock to 12h and US units: right-click
 - `sudo apt install compizconfig-settings-manager` then choose Compiz as compositor from MATE Tweak
-
+- Compiz fixes/tweaks:
+  - In Commands, Command line 1, remove `--interactive` so that Shift-PrintScreen doesn't show the unnecessary dialog.
+  - In General Options, use:
+  ```
+  s0_close_window_key = <Super>q
+  s0_close_window_button = Disabled
+  s0_raise_window_key = Disabled
+  s0_raise_window_button = Disabled
+  s0_lower_window_key = Disabled
+  s0_lower_window_button = Disabled
+  s0_minimize_window_key = <Control>h
+  s0_minimize_window_button = Disabled
+  s0_maximize_window_key = <Super>Up
+  s0_unmaximize_window_key = Disabled
+  s0_unmaximize_or_minimize_window_key = <Super>Down
+  s0_maximize_window_horizontally_key = Disabled
+  s0_maximize_window_vertically_key = Disabled
+  s0_window_menu_key = <Alt>space
+  s0_window_menu_button = Disabled
+  s0_show_desktop_key = <Super>d
+  s0_show_desktop_edge = 
+  s0_toggle_window_maximized_key = Disabled
+  s0_toggle_window_maximized_button = Disabled
+  s0_toggle_window_maximized_horizontally_key = Disabled
+  s0_toggle_window_maximized_vertically_key = Disabled
+  s0_toggle_window_shaded_key = Disabled
+  s0_hsize = 3
+  s0_vsize = 2
+  ```
+  
 
 ## To Do:
 
