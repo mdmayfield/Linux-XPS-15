@@ -27,6 +27,7 @@ gsettings set com.solus-project.brisk-menu hot-key ''``
 - Set Plank theme: Matte
 - Configure HUD: `gsettings set org.mate.hud shortcut '<Super>space'` then enable in MATE Tweak
 - Set menubar clock to 12h and US units: right-click
+- `sudo apt install compizconfig-settings-manager` then choose Compiz as compositor from MATE Tweak
 
 
 ## To Do:
