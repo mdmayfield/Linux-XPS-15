@@ -24,7 +24,7 @@ gsettings set com.solus-project.brisk-menu hot-key ''``
 - Set up Time And Date control panel to keep sync with Internet time servers. First `sudo apt install ntp` then change Control Panel. (Why on Earth don't they install ntp automatically, or at least give a newbie-friendly error message? I knew what to do but a new user wouldn't.)
 - Touchpad control panel - set up horiz + vert scrolling, and two- and three-finger click/tap. (will still tweak with xinput settings in .xsessionrc)
 - In prep for move to Cupertino layout (because I don't want the full-screen Brisk Menu):
-``
+```
 gsettings list-recursively com.solus-project.brisk-menu
 com.solus-project.brisk-menu dark-theme false
 com.solus-project.brisk-menu search-position 'top'
@@ -35,7 +35,7 @@ com.solus-project.brisk-menu label-text ''
 com.solus-project.brisk-menu hot-key '<Ctrl>space'
 com.solus-project.brisk-menu label-visible true
 com.solus-project.brisk-menu pinned-shortcuts ['matecc.desktop']
-``
+```
 
 
 ## To Do:
