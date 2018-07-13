@@ -26,6 +26,7 @@ gsettings set com.solus-project.brisk-menu hot-key ''``
 - In MATE Tweak, select Cupertino layout, then (because I don't want the full-screen Brisk Menu): `gsettings set com.solus-project.brisk-menu window-type 'classic'`
 - Set Plank theme: Matte
 - Configure HUD: `gsettings set org.mate.hud shortcut '<Super>space'` then enable in MATE Tweak
+- Set menubar clock to 12h and US units: right-click
 
 
 ## To Do:
