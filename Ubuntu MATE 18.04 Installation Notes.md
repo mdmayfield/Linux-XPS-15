@@ -68,7 +68,7 @@ gsettings set com.solus-project.brisk-menu hot-key ''``
     - Appearance Saturation/Brightness/Opacity each 60%
   - Move Window: Initiate Window Move -> <Super><Alt>
   - Grid: just <Super> not <Super><Control> for Left Maximize and Right Maximize. Top Maximize, Bottom do nothing.
-  
+- Put Linux-XPS-15/custom keymap in ~/.xkb, and add `xkbcomp $HOME/.xkb/custom $DISPLAY` to `~/.xsessionrc`. *Not sure why this seems to work on Ubuntu MATE 18.04 when it does not work on Ubuntu Unity 16.04.*
   
 
 ## To Do:
