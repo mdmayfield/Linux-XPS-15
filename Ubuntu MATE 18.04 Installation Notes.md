@@ -83,3 +83,5 @@ gsettings set com.solus-project.brisk-menu hot-key ''``
 - Custom brightness to go to 1 instead of 0
 - Eliminate <Super>-S hotkey from mate-indicator-applet-complete (crashes when I press it? Also prevents Compiz from receiving the shortcut)
 - Manage other system keyboard shortcuts
+- Set up audio stuff
+  
