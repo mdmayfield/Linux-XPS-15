@@ -70,7 +70,7 @@ gsettings set com.solus-project.brisk-menu hot-key ''``
   - Move Window: Initiate Window Move -> <Super><Alt>
   - Grid: just <Super> not <Super><Control> for Left Maximize and Right Maximize. Top Maximize, Bottom do nothing.
 - Put Linux-XPS-15/custom keymap in ~/.xkb, and add `xkbcomp $HOME/.xkb/custom $DISPLAY` to `~/.xsessionrc`. *Not sure why this seems to work on Ubuntu MATE 18.04 when it does not work on Ubuntu Unity 16.04.*
-- `sudo apt install autokey-gtk`; run Autokey, quit. Swap in `autokey/data` for `~/.config/autokey/data`
+- `sudo apt install autokey-gtk`; run Autokey, quit. Swap in `autokey/data` for `~/.config/autokey/data`. Manually add it to Startup Items.
 - Replace ~/.mozilla/firefox folder with backup from previous installation
 - Add to ~/.profile: `# enable smooth scrolling in Firefox  \n  export MOZ_USE_XINPUT2=1` (doesn't take effect right away even if you . .profile; need to log out/in, or start FF from terminal while setting that var)
 - In `/etc/dbus-1/system.d/org.freedesktop.UPower.conf`, change `<allow send_destination="org.freedesktop.UPower" send_interface="org.freedesktop.UPower.KbdBacklight"/>` to `deny`.
@@ -78,6 +78,8 @@ gsettings set com.solus-project.brisk-menu hot-key ''``
   - Note that there are two similar entries; read carefully. On my install the correct one was near the end.
 - Disable the annoying sound when plugging in or unplugging the AC adapter: `gsettings set org.mate.power-manager enable-sound false`
 - Turn off terminal bell: MATE Terminal -> Edit -> Profile Preferences
+- Trying this to keep Bluetooth from turing on every restart: `gsettings set org.blueman.plugins.powermanager auto-power-on false`
+- Had to re-copy Bluetooth firmware to `/lib/firmware/brcm/`; see Bluetooth.md 
 
 ## To Do:
 
