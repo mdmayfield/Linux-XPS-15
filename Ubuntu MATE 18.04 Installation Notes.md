@@ -77,6 +77,7 @@ gsettings set com.solus-project.brisk-menu hot-key ''``
 - Follow https://gist.github.com/tomwwright/f88e2ddb344cf99f299935e1312da880 for nVidia stuff
 - Report (diagnose?) bug: in Firefox, highlighted text has tops cut off of letters
 - Set up my own libinput fork (perhaps rebase it on latest)
+- Set up libinput-gestures
 - Look into kernel patch for Confidence bit on touchpad, or maybe just turn off HW palm detection (Confidence quirk in hid-multitouch)
 - Install software and import from backup of ~ on a case-by-case basis (Thunderbird and Firefox profiles, VirtualBox machines)
 - Set up KXStudio and determine if lowlatency or realtime kernel is needed
