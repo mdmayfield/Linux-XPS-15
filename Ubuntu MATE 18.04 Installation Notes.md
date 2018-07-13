@@ -9,8 +9,9 @@
   - Need to run `sudo powertop` for quite some time on battery power to get a reading
   - After this, `sudo powertop --auto-tune`
   - Note while doing this - powertop is showing only around 4 watts discharge when idle. Better than I usually saw in 16.04; maybe newer kernel helps?
+- `sudo apt install build-essential git x11proto-core-dev libx11-dev libxt-dev libxfixes-dev libxi-dev`  
+- `git config --global user.email "mdmayfield@users.noreply.github.com"`; `git config --global user.name "Matt Mayfield"`
 - Make and install xbanish:
-  - `sudo apt install build-essential git x11proto-core-dev libx11-dev libxt-dev libxfixes-dev libxi-dev`
   - `mkdir ~/Developer`; `cd ~/Developer`; `git clone https://github.com/mdmayfield/xbanish.git`; `cd xbanish`
   - `make` xbanish then `sudo cp xbanish /usr/local/bin/`
   - To run: `xbanish -i Shift -i Control -i mod1 -i mod4 &` and put that line in `~/.xsessionrc` to run at startup
