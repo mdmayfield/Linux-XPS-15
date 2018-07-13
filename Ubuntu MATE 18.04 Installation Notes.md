@@ -77,7 +77,7 @@ gsettings set com.solus-project.brisk-menu hot-key ''``
   - This keeps the keyboard backlight from constantly turning itself on randomly.
   - Note that there are two similar entries; read carefully. On my install the correct one was near the end.
 - Disable the annoying sound when plugging in or unplugging the AC adapter: `gsettings set org.mate.power-manager enable-sound false`
-  
+- Turn off terminal bell: MATE Terminal -> Edit -> Profile Preferences
 
 ## To Do:
 
@@ -92,3 +92,4 @@ gsettings set com.solus-project.brisk-menu hot-key ''``
 - Eliminate <Super>-S hotkey from mate-indicator-applet-complete (crashes when I press it? Also prevents Compiz from receiving the shortcut)
 - Set up audio stuff
 - Find a way to reduce the amount of logging that AutoKey does https://docs.python.org/2/library/logging.html  autokey/lib/autokey/gtkapp.py
+- Figure out weirdness with alert volume
