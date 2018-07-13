@@ -22,6 +22,7 @@ gsettings set com.solus-project.brisk-menu hot-key ''``
 - Set up printer (which was *ridiculously* easy; it was already automatically detected)
 - Go to Software Sources and enable Source Code repo
 - Set up Time And Date control panel to keep sync with Internet time servers. First `sudo apt install ntp` then change Control Panel. (Why on Earth don't they install ntp automatically, or at least give a newbie-friendly error message? I knew what to do but a new user wouldn't.)
+- Touchpad control panel - set up horiz + vert scrolling, and two- and three-finger click/tap. (will still tweak with xinput settings in .xsessionrc)
 
 
 ## To Do:
