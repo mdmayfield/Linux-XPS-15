@@ -76,6 +76,7 @@ gsettings set com.solus-project.brisk-menu hot-key ''``
 
 - Follow https://gist.github.com/tomwwright/f88e2ddb344cf99f299935e1312da880 for nVidia stuff
 - Report (diagnose?) bug: in Firefox, highlighted text has tops cut off of letters
+- Prevent keyboard backlight from coming on all the time when I didn't ask for it
 - Set up my own libinput fork (perhaps rebase it on latest)
 - Set up libinput-gestures
 - Look into kernel patch for Confidence bit on touchpad, or maybe just turn off HW palm detection (Confidence quirk in hid-multitouch)
