@@ -60,7 +60,7 @@ gsettings set com.solus-project.brisk-menu hot-key ''``
   - In Desktop Wall:
     - Turn off all four options in Bindings -> Edge Flipping. This fixes an issue with the Global Menu not rolling over on the top pixel of the screen.
     - EXPERIMENTAL: In Viewport Switching, set Multimonitor behavior to Switch Separately
-    - Set keyboard bindings to Super-Alt arrows for navigation, and Super-Alt-Shift arrows for moving a window
+    - Set keyboard bindings to Super-Ctrl (becomes Alt with custom keymap, which becomes Ctrl) arrows for navigation, and Super-Ctrl-Shift arrows for moving a window
   - In Expo ISSUE: currently <Super>s is swallowed by indicator-applet-complete. See To Do item. Temporary workaround: set shortcut to <Super>grave
   - Disable Application Switcher, enable Static Application Switcher:
     - Ctrl-Tab for next window (all windows), Ctrl-\` for previous window (all windows)
