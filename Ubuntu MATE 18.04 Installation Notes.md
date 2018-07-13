@@ -34,3 +34,4 @@ gsettings set com.solus-project.brisk-menu hot-key ''``
 - Install software and import from backup of ~ on a case-by-case basis (Thunderbird and Firefox profiles, VirtualBox machines)
 - Set up KXStudio and determine if lowlatency or realtime kernel is needed
 - Custom brightness to go to 1 instead of 0
+- Eliminate <Super>-S hotkey from mate-indicator-applet-complete (crashes when I press it? Also prevents Compiz from receiving the shortcut)
