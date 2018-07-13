@@ -69,7 +69,7 @@ gsettings set com.solus-project.brisk-menu hot-key ''``
   - Move Window: Initiate Window Move -> <Super><Alt>
   - Grid: just <Super> not <Super><Control> for Left Maximize and Right Maximize. Top Maximize, Bottom do nothing.
 - Put Linux-XPS-15/custom keymap in ~/.xkb, and add `xkbcomp $HOME/.xkb/custom $DISPLAY` to `~/.xsessionrc`. *Not sure why this seems to work on Ubuntu MATE 18.04 when it does not work on Ubuntu Unity 16.04.*
-  
+- `sudo apt install autokey-gtk`; run Autokey, quit. Swap in `autokey/data` for `~/.config/autokey/data`
 
 ## To Do:
 
