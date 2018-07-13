@@ -20,6 +20,8 @@
 gsettings set com.solus-project.brisk-menu hot-key ''``
 - Install extra codecs, fonts: `sudo apt install libavcodec-extra unrar`; `sudo apt install ttf-mscorefonts-installer`; `sudo apt install gstreamer1.0-libav gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly`
 - Set up printer (which was *ridiculously* easy; it was already automatically detected)
+- Go to Software Sources and enable Source Code repo
+
 
 
 ## To Do:
