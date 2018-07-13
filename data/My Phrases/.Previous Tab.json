@@ -1,0 +1,32 @@
+{
+    "usageCount": 76, 
+    "omitTrigger": false, 
+    "prompt": false, 
+    "description": "Previous Tab", 
+    "abbreviation": {
+        "wordChars": "[\\w]", 
+        "abbreviations": [], 
+        "immediate": false, 
+        "ignoreCase": false, 
+        "backspace": true, 
+        "triggerInside": false
+    }, 
+    "hotkey": {
+        "hotKey": "<left>", 
+        "modifiers": [
+            "<ctrl>", 
+            "<shift>"
+        ]
+    }, 
+    "modes": [
+        3
+    ], 
+    "showInTrayMenu": false, 
+    "matchCase": false, 
+    "filter": {
+        "regex": "Navigator.Firefox|Mail.Thunderbird|google-chrome.Google-chrome|chromium-browser.Chromium-browser", 
+        "isRecursive": false
+    }, 
+    "type": "phrase", 
+    "sendMode": "kb"
+}
