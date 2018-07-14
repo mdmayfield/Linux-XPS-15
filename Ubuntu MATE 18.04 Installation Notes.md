@@ -102,3 +102,5 @@ gsettings set com.solus-project.brisk-menu hot-key ''``
 - Find a way to reduce the amount of logging that AutoKey does https://docs.python.org/2/library/logging.html  autokey/lib/autokey/gtkapp.py
 - Figure out weirdness with alert volume
 - Figure out why AutoKey config window pops up when triggering `caja ~` or `xdg-open ~` from a script
+- Space bar preview (Gloobus, Sushi... but would be nicer with arrows)
+- File content index search
