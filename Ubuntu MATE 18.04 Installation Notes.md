@@ -85,6 +85,7 @@ gsettings set com.solus-project.brisk-menu hot-key ''``
   exit 0
   ```
 - Had to re-copy Bluetooth firmware to `/lib/firmware/brcm/`; see Bluetooth.md 
+- `sudo apt remove vlc`; `sudo snap install vlc`. VLC 3.0.2 has issues with timeline tooltips causing flickering (and also vala-panel-appmenu crashes).
 
 ## To Do:
 
