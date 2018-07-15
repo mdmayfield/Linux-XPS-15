@@ -126,7 +126,6 @@ sudo ldconfig
 - Install software and import from backup of ~ on a case-by-case basis (Thunderbird and Firefox profiles, VirtualBox machines)
 - Set up KXStudio and determine if lowlatency or realtime kernel is needed
 - Custom brightness to go to 1 instead of 0
-- Eliminate <Super>-S hotkey from mate-indicator-applet-complete (crashes when I press it? Also prevents Compiz from receiving the shortcut)
 - Set up audio stuff
 - Find a way to reduce the amount of logging that AutoKey does https://docs.python.org/2/library/logging.html  autokey/lib/autokey/gtkapp.py
 - Figure out weirdness with alert volume
