@@ -91,7 +91,7 @@ gsettings set com.solus-project.brisk-menu hot-key ''``
 
 - Follow https://gist.github.com/tomwwright/f88e2ddb344cf99f299935e1312da880 for nVidia stuff
 - Report (diagnose?) bug: in Firefox, highlighted text has tops cut off of letters
-- Set up my own libinput fork (perhaps rebase it on latest)
+- Set up my own libinput fork (perhaps rebase it on latest) - looks like my fork may not be needed. The skips are resolved either through physical trackpad replacement or 18.04's libinput version, and now I'm using clickfinger instead of button areas. Only remaining issue is undesirable acceleration curve, and overzealous hysteresis. Going to try upstream version.
 - Set up libinput-gestures
 - Look into kernel patch for Confidence bit on touchpad, or maybe just turn off HW palm detection (Confidence quirk in hid-multitouch)
 - Install software and import from backup of ~ on a case-by-case basis (Thunderbird and Firefox profiles, VirtualBox machines)
