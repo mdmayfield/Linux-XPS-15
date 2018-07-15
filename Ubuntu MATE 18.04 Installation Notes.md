@@ -112,6 +112,7 @@ sudo ldconfig
   gesture swipe left	xdotool key super+alt+Left
   gesture swipe right	xdotool key super+alt+Right
   ```
+  - `libinput-gestures-setup autostart` to automatically run at login; `libinput-gestures-setup start` to run now
 
 ## To Do:
 
