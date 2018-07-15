@@ -70,7 +70,7 @@ gsettings set com.solus-project.brisk-menu hot-key ''``
   - Move Window: Initiate Window Move -> <Super><Alt>
   - Grid: just <Super> not <Super><Control> for Left Maximize and Right Maximize. Top Maximize, Bottom do nothing.
 - Put Linux-XPS-15/custom keymap in ~/.xkb, and add `xkbcomp $HOME/.xkb/custom $DISPLAY` to `~/.xsessionrc`. *Not sure why this seems to work on Ubuntu MATE 18.04 when it does not work on Ubuntu Unity 16.04.*
-- `sudo apt install autokey-gtk`; run Autokey, quit. Swap in `autokey/data` for `~/.config/autokey/data`. Manually add it to Startup Items.
+- `sudo apt install autokey-gtk`; run Autokey, quit. Swap in `autokey/data` for `~/.config/autokey/data`. Manually add it to Startup Items. Use the command `(autokey &)` to avoid the issue where Ctrl-N on desktop pops up both ~ and the AutoKey config window.
 - Replace ~/.mozilla/firefox folder with backup from previous installation
 - Add to ~/.profile: `# enable smooth scrolling in Firefox  \n  export MOZ_USE_XINPUT2=1` (doesn't take effect right away even if you . .profile; need to log out/in, or start FF from terminal while setting that var)
 - In `/etc/dbus-1/system.d/org.freedesktop.UPower.conf`, change `<allow send_destination="org.freedesktop.UPower" send_interface="org.freedesktop.UPower.KbdBacklight"/>` to `deny`.
@@ -113,6 +113,7 @@ sudo ldconfig
   gesture swipe right	xdotool key super+alt+Right
   ```
   - `libinput-gestures-setup autostart` to automatically run at login; `libinput-gestures-setup start` to run now
+- 
 
 ## To Do:
 
