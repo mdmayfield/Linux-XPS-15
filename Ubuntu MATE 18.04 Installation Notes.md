@@ -86,7 +86,7 @@ gsettings set com.solus-project.brisk-menu hot-key ''``
   ```
 - Had to re-copy Bluetooth firmware to `/lib/firmware/brcm/`; see Bluetooth.md 
 - `sudo apt remove vlc`; `sudo snap install vlc`. VLC 3.0.2 has issues with timeline tooltips causing flickering (and also vala-panel-appmenu crashes).
-- Install libinput touchpad driver from source (my own fork no longer needed; he skips are resolved either through physical trackpad replacement or 18.04's libinput version, and now I'm using clickfinger instead of button areas. Only remaining issues were undesirable acceleration curve, and overzealous hysteresis; Peter has fixed these as of 1.11.2 or so!)
+- Install libinput touchpad driver from source (upstream is much better as of this writing; only customization is to allow two-finger scrolling and three-finger gestures while mouse button is held down)
 ```
 sudo apt build-dep libinput
 sudo apt install ninja-build meson doxygen graphviz libgtk-3-dev check valgrind libunwind-dev
