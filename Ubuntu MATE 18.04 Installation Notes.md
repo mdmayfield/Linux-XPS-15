@@ -115,7 +115,8 @@ sudo ldconfig
   - `libinput-gestures-setup autostart` to automatically run at login; `libinput-gestures-setup start` to run now
 - Install custom mate-indicator-applet with no hotkeys from source.
   - `cd ~/Developer`; `git clone https://github.com/mdmayfield/mate-indicator-applet.git`; `cd mate-indicator-applet`
-  - STILL TESTING: `sudo apt install mate-common`; `sudo apt build-dep mate-indicator-applet` (may make previous step redundant); `./autogen.sh --with-ubuntu-indicators`
+  - `sudo apt build-dep mate-indicator-applet`; `./autogen.sh --with-ubuntu-indicators`; `make`; `sudo make install`
+  - Log out/in or restart
 
 ## To Do:
 
