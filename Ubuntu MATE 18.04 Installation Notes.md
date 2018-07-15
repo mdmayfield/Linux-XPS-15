@@ -100,12 +100,17 @@ cd /etc/ld.so.conf.d/
 echo '/usr/local/lib/x86_64-linux-gnu' | sudo tee -a usr-local-lib.conf
 sudo ldconfig
 ```  
+- Set up libinput-gestures:
+  - `sudo gpasswd -a $USER input` to add self to input group
+  - `sudo apt install xdotool wmctrl`
+  - Since I compiled my own libinput the tools are pre-installed. If I hadn't and were using libinput from the repo, I would also `sudo apt install libinput-tools`.
+  - `cd ~/Developer`; `git clone https://github.com/bulletmark/libinput-gestures.git`; `cd libinput-gestures`; inspect scripts for anything funky; `sudo make install`
+
 
 ## To Do:
 
 - Follow https://gist.github.com/tomwwright/f88e2ddb344cf99f299935e1312da880 for nVidia stuff
 - Report (diagnose?) bug: in Firefox, highlighted text has tops cut off of letters
-- Set up libinput-gestures
 - Look into kernel patch for Confidence bit on touchpad, or maybe just turn off HW palm detection (Confidence quirk in hid-multitouch)
 - Install software and import from backup of ~ on a case-by-case basis (Thunderbird and Firefox profiles, VirtualBox machines)
 - Set up KXStudio and determine if lowlatency or realtime kernel is needed
@@ -114,7 +119,7 @@ sudo ldconfig
 - Set up audio stuff
 - Find a way to reduce the amount of logging that AutoKey does https://docs.python.org/2/library/logging.html  autokey/lib/autokey/gtkapp.py
 - Figure out weirdness with alert volume
-- Figure out why AutoKey config window pops up when triggering `caja ~` or `xdg-open ~` from a script
+- Figure out why AutoKey config window pops up when triggering `caja ~` or `xdg-open ~` from a script -- this seems related to Caja and autokey sharing a parent process, continuing to experiment
 - Space bar preview (Gloobus, Sushi... but would be nicer with arrows)
 - File content index search
 - Clean up fonts list; disable or remove fonts from other locales (why on Earth are there 50 duplicates of Noto for various places? Wasn't Unicode supposed to solve this?)
