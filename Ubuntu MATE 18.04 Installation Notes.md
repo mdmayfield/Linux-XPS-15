@@ -86,12 +86,12 @@ gsettings set com.solus-project.brisk-menu hot-key ''``
   ```
 - Had to re-copy Bluetooth firmware to `/lib/firmware/brcm/`; see Bluetooth.md 
 - `sudo apt remove vlc`; `sudo snap install vlc`. VLC 3.0.2 has issues with timeline tooltips causing flickering (and also vala-panel-appmenu crashes).
-- Install libinput touchpad driver from source (upstream is much better as of this writing; only customization is to allow two-finger scrolling and three-finger gestures while mouse button is held down)
+- Install libinput touchpad driver from source (upstream is much better as of this writing; only customizations remaining are to allow two-finger scrolling and three-finger gestures while mouse button is held down, and immediately assume the bottom few mm of the touchpad is a thumb)
 ```
 sudo apt build-dep libinput
 sudo apt install ninja-build meson doxygen graphviz libgtk-3-dev check valgrind libunwind-dev
 cd Developer/
-git clone https://github.com/wayland-project/libinput.git
+git clone https://github.com/mdmayfield/libinput.git
 cd libinput/
 meson . builddir
 ninja -C builddir
@@ -127,9 +127,7 @@ sudo ldconfig
 - Set up audio stuff
 - Find a way to reduce the amount of logging that AutoKey does https://docs.python.org/2/library/logging.html  autokey/lib/autokey/gtkapp.py
 - Figure out weirdness with alert volume
-- Figure out why AutoKey config window pops up when triggering `caja ~` or `xdg-open ~` from a script -- this seems related to Caja and autokey sharing a parent process, continuing to experiment
 - Space bar preview (Gloobus, Sushi... but would be nicer with arrows)
 - File content index search
 - Clean up fonts list; disable or remove fonts from other locales (why on Earth are there 50 duplicates of Noto for various places? Wasn't Unicode supposed to solve this?)
 - Consider using Compiz Scale (all windows) instead of Static Application Switcher
-- Patch latest libinput to allow two-finger scrolling or three-finger gestures while button is held down
