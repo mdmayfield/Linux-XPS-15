@@ -36,6 +36,15 @@ xkb_keymap {
 		 NoAction() ]
 	    };
 
+	   replace key <DELE> {
+	      type = "CMD_OPT_HELD",
+	      symbols[Group1] = [ Delete, Delete, Delete, Delete ],
+	      actions[Group1] = [ RedirectKey(key=<DELE>,clearmods=Control+Mod1),
+		 RedirectKey(key=<DELE>,clearmods=Control+Mod1,modifiers=Control),
+		 RedirectKey(key=<DELE>,clearmods=Control+Mod1,modifiers=Mod1),
+		 NoAction() ]
+	    };
+
             replace key <UP> {
 	      type = "CMD_OPT_HELD",
 	      symbols[Group1] = [ Up, Up, Up, Up ],
