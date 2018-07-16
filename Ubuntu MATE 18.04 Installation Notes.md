@@ -133,3 +133,4 @@ sudo ldconfig
 - File content index search
 - Clean up fonts list; disable or remove fonts from other locales (why on Earth are there 50 duplicates of Noto for various places? Wasn't Unicode supposed to solve this?)
 - Consider using Compiz Scale (all windows) instead of Static Application Switcher
+- GUI-based / automatic backup
