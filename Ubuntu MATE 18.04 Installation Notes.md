@@ -117,7 +117,8 @@ sudo ldconfig
   - `cd ~/Developer`; `git clone https://github.com/mdmayfield/mate-indicator-applet.git`; `cd mate-indicator-applet`
   - `sudo apt build-dep mate-indicator-applet`; `./autogen.sh --with-ubuntu-indicators`; `make`; `sudo make install`
   - Log out/in or restart
-
+- Remove Plank icon from Plank dock: `gsettings set net.launchpad.plank.dock.settings:/net/launchpad/plank/docks/dock1/ show-dock-item false`
+  
 ## To Do:
 
 - Follow https://gist.github.com/tomwwright/f88e2ddb344cf99f299935e1312da880 for nVidia stuff
