@@ -104,7 +104,7 @@ sudo ldconfig
   - `sudo gpasswd -a $USER input` to add self to input group
   - `sudo apt install xdotool wmctrl`
   - Since I compiled my own libinput the tools are pre-installed. If I hadn't and were using libinput from the repo, I would also `sudo apt install libinput-tools`.
-  - `cd ~/Developer`; `git clone https://github.com/bulletmark/libinput-gestures.git`; `cd libinput-gestures`; inspect scripts for anything funky; `sudo make install`
+  - `cd ~/Developer`; `git clone https://github.com/mdmayfield/libinput-gestures.git`; `cd libinput-gestures`; `sudo make install`
   - in `~/.config/libinput-gestures.conf`:
   ```
   gesture swipe up	xdotool key super+alt+Up
