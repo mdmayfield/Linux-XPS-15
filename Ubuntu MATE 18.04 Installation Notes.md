@@ -135,3 +135,5 @@ sudo ldconfig
 - Clean up fonts list; disable or remove fonts from other locales (why on Earth are there 50 duplicates of Noto for various places? Wasn't Unicode supposed to solve this?)
 - Consider using Compiz Scale (all windows) instead of Static Application Switcher
 - GUI-based / automatic backup
+- Permanent solution to headphone jack being dead until HDAJackRetask / speakers not working after using headphones / other weirdness on the Realtek ALC3266
+- Compiz causing all kinds of flickering issues on external monitor - find settings that fix this
