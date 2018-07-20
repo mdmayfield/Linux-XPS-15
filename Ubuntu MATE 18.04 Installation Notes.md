@@ -136,4 +136,4 @@ sudo ldconfig
 - Consider using Compiz Scale (all windows) instead of Static Application Switcher
 - GUI-based / automatic backup
 - Permanent solution to headphone jack being dead until HDAJackRetask / speakers not working after using headphones / other weirdness on the Realtek ALC3266
-- Compiz causing all kinds of flickering issues on external monitor - find settings that fix this
+- Compiz causing all kinds of flickering issues on certain external monitors - find settings that fix this
