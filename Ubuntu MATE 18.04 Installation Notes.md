@@ -62,13 +62,13 @@ gsettings set com.solus-project.brisk-menu hot-key ''``
     - Turn off all four options in Bindings -> Edge Flipping. This fixes an issue with the Global Menu not rolling over on the top pixel of the screen.
     - EXPERIMENTAL: In Viewport Switching, set Multimonitor behavior to Switch Separately
     - Set keyboard bindings to Super-Ctrl (becomes Alt with custom keymap, which becomes Ctrl) arrows for navigation, and Super-Ctrl-Shift arrows for moving a window
-  - In Expo ISSUE: currently <Super>s is swallowed by indicator-applet-complete. See To Do item. Temporary workaround: set shortcut to <Super>grave
+  - In Expo ISSUE: currently \<Super\>s is swallowed by indicator-applet-complete. See To Do item. Temporary workaround: set shortcut to \<Super\>grave
   - Disable Application Switcher, enable Static Application Switcher:
     - Ctrl-Tab for next window (all windows), Ctrl-\` for previous window (all windows)
     - Behavior turn off Auto Change Viewport
     - Appearance Saturation/Brightness/Opacity each 60%
-  - Move Window: Initiate Window Move -> <Super><Alt>
-  - Grid: just <Super> not <Super><Control> for Left Maximize and Right Maximize. Top Maximize, Bottom do nothing.
+  - Move Window: Initiate Window Move -> \<Super\>\<Alt\>
+  - Grid: just \<Super\> not \<Super\>\<Control\> for Left Maximize and Right Maximize. Top Maximize, Bottom do nothing.
 - Put Linux-XPS-15/custom keymap in ~/.xkb, and add `xkbcomp $HOME/.xkb/custom $DISPLAY` to `~/.xsessionrc`. *Not sure why this seems to work on Ubuntu MATE 18.04 when it does not work on Ubuntu Unity 16.04. Also pleased to discover that the keymap sticks around even after plugging in USB headset, which it did not in 16.04.*
 - `sudo apt install autokey-gtk`; run Autokey, quit. Swap in `autokey/data` for `~/.config/autokey/data`. Manually add it to Startup Items. Tried the command `(autokey &)` to avoid the issue where Ctrl-N on desktop pops up both ~ and the AutoKey config window; didn't work. Instead, for script within AutoKey, using `dbus-send --session --type=method_call --dest="org.freedesktop.FileManager1" "/org/freedesktop/FileManager1" "org.freedesktop.FileManager1.ShowFolders" array:string:"file://$HOME" string:""`
 - Replace ~/.mozilla/firefox folder with backup from previous installation
