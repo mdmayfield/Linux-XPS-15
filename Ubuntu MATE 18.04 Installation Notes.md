@@ -111,6 +111,7 @@ sudo ldconfig
   gesture swipe down	xdotool key super+alt+Down
   gesture swipe left	xdotool key super+alt+Left
   gesture swipe right	xdotool key super+alt+Right
+  swipe_threshold 300
   ```
   - `libinput-gestures-setup autostart` to automatically run at login; `libinput-gestures-setup start` to run now
 - Install custom mate-indicator-applet with no hotkeys from source.
