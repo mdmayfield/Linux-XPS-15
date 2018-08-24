@@ -11,4 +11,8 @@ sudo ln -s /lib/x86_64-linux-gnu/libssl.so.1.0.0 /usr/lib/libssl.so.10
 sudo ln -s /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 /usr/lib/libcrypto.so.10
 ```
 
-However I'm not seeing a `libssl.so.1.0.0` in my main library folder. - Found it in /usr/lib/x86*
+However I'm not seeing a `libssl.so.1.0.0` in my main library folder. - Found it in /usr/lib/x86* so links not needed
+
+Program launches and shows tour, but segfault when running.
+
+Grasping at straws here... trying `sudo apt install mesa-vulkan-drivers libosmesa6-dev libosmesa6 libglu1-mesa-dev`
