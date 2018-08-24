@@ -16,3 +16,7 @@ However I'm not seeing a `libssl.so.1.0.0` in my main library folder. - Found it
 Program launches and shows tour, but segfault when running.
 
 Grasping at straws here... trying `sudo apt install mesa-vulkan-drivers libosmesa6-dev libosmesa6 libglu1-mesa-dev`
+
+Log shows `OpenCL error -1001, GPUPropertiesUtilUnix.cpp:338.`
+
+trying to install `nvidia-opencl-dev`
