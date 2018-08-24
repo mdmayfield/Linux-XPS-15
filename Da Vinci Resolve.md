@@ -11,4 +11,4 @@ sudo ln -s /lib/x86_64-linux-gnu/libssl.so.1.0.0 /usr/lib/libssl.so.10
 sudo ln -s /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 /usr/lib/libcrypto.so.10
 ```
 
-However I'm not seeing a `libssl.so.1.0.0` in my main library folder.
+However I'm not seeing a `libssl.so.1.0.0` in my main library folder. - Found it in /usr/lib/x86*
