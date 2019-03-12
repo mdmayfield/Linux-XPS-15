@@ -1,1 +1,1 @@
-<ctrl>+<tab>
+<ctrl>+<page_down>
