@@ -1,0 +1,1 @@
+`system.exec_command('dbus-send --session --type=method_call --dest="org.freedesktop.FileManager1" "/org/freedesktop/FileManager1" "org.freedesktop.FileManager1.ShowFolders" array:string:"file://$HOME" string:""')`
