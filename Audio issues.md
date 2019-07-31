@@ -3,10 +3,10 @@ On new desktop, trying to configure realtimeconfigquickscan. Audio is a *big* pa
 
 Took this from https://linuxmusicians.com/viewtopic.php?t=2191
 ```
-So I create a new 40-rtc-permissions.rules file in /lib/udev/rules.d
-where I put the following line:
+create /lib/udev/rules.d/40-rtc-permissions.rules - contents:
 
 KERNEL=="rtc0", GROUP="audio"
+KERNEL=="hpet", GROUP="audio"
 ```
 
 Took this from https://linuxmusicians.com/viewtopic.php?f=27&t=844
