@@ -1,9 +1,9 @@
 On new desktop, trying to configure realtimeconfigquickscan. Audio is a *big* pain. Jack sporadically just doesn't work.
 
 
-Took this from https://linuxmusicians.com/viewtopic.php?t=2191
+Took this from https://linuxmusicians.com/viewtopic.php?t=2191 + https://unix.stackexchange.com/questions/333697/etc-udev-rules-d-vs-lib-udev-rules-d-which-to-use-and-why
 ```
-create /lib/udev/rules.d/40-rtc-permissions.rules - contents:
+create /etc/udev/rules.d/40-rtc-permissions.rules - contents:
 
 KERNEL=="rtc0", GROUP="audio"
 KERNEL=="hpet", GROUP="audio"
