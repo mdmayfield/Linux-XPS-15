@@ -13,3 +13,8 @@ Took this from https://linuxmusicians.com/viewtopic.php?f=27&t=844
 ```
 for x in $( seq 0 7 ); do sudo cpufreq-set -c $x -g performance; done
 ```
+
+
+So far best success is with the above cpufreq-set, and rtirq with `RTIRQ_NAME_LIST="usb i8042"`, plus install RT kernel from Debian: https://packages.debian.org/sid/amd64/linux-image-5.2.0-1-rt-amd64-unsigned/download
+
+Seeing xruns of the "soft" (?) type, in parenthesis, on Reaper when doing pitch shift FX, but PulseAudio (FireFox/YouTube) continues uninterrupted. Almost no "hard" xruns even at 3x32 buffer.
