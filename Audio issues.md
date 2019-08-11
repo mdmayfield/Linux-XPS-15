@@ -20,7 +20,7 @@ So far best success is with the above cpufreq-set, and rtirq with `RTIRQ_NAME_LI
 Seeing xruns of the "soft" (?) type, in parenthesis, on Reaper when doing pitch shift FX, but PulseAudio (FireFox/YouTube) continues uninterrupted. Almost no "hard" xruns even at 3x32 buffer.
 
 
-
+This isn't actually necessary; same problems with or without realtime kernel
 
 
 
