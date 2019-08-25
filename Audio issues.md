@@ -6,7 +6,7 @@ set-default-sink Focusrite_stereo
 set-default-source alsa_input.usb-Focusrite_Scarlett_18i20_USB_03018219-00.multichannel-input
 ```
 
-In QJackCtl, set this as after startup script: `a2jmidid -e & pacmd set-default-sink jack_out & pacmd set-default-source jack_in`
+In QJackCtl, set this as after startup script: `a2jmidid -e & pacmd set-default-sink jack_out & pacmd set-default-source jack_in`  TODO: add equivalent to route to my downmixed 2-channel virtual device after stopping jack
 
 ----
 
