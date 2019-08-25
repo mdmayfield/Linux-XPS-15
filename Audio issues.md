@@ -1,3 +1,15 @@
+For Pulse, used these at the end of `~/.config/pulse/default.pa`:
+
+```
+load-module module-remap-sink sink_name=Focusrite_stereo channels=2 master=alsa_output.usb-Focusrite_Scarlett_18i20_USB_03018219-00.multich>
+set-default-sink Focusrite_stereo
+set-default-source alsa_input.usb-Focusrite_Scarlett_18i20_USB_03018219-00.multichannel-input
+```
+
+
+
+----
+
 On new desktop, trying to configure realtimeconfigquickscan. Audio is a *big* pain. Jack sporadically just doesn't work.
 
 
