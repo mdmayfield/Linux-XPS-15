@@ -89,7 +89,7 @@ gsettings set com.solus-project.brisk-menu hot-key ''``
 - Install libinput touchpad driver from source (upstream is much better as of this writing; only customizations remaining are to allow two-finger scrolling and three-finger gestures while mouse button is held down, and immediately assume the bottom few mm of the touchpad is a thumb)
 ```
 sudo apt build-dep libinput
-sudo apt install ninja-build meson doxygen graphviz libgtk-3-dev check valgrind libunwind-dev
+sudo apt install ninja-build meson doxygen graphviz libgtk-3-dev check valgrind libunwind-dev libdotconf-dev python3-pydot python3-sphinxcontrob.apidoc python3-recommonmark sphinx-rtd-theme-common python3-sphinx-rtd-theme
 cd Developer/
 git clone https://github.com/mdmayfield/libinput.git
 cd libinput/
