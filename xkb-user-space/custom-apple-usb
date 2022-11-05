@@ -1,0 +1,101 @@
+xkb_keymap {
+	xkb_keycodes  { include "evdev+aliases(qwerty)"	};
+	xkb_types     { include "complete"	
+		type "CMD_OPT_HELD" {
+		  modifiers = Alt+Control;
+		  map[None] = Level1;
+		  map[Alt] = Level2;
+		  map[Control] = Level3;
+		  map[Alt+Control] = Level4;
+		  level_name[Level1] = "Base";
+		  level_name[Level2] = "Alt";
+		  level_name[Level3] = "Control";
+		  level_name[Level4] = "Alt+Control";
+		};
+	};
+	xkb_compat    { include "complete"	};
+	xkb_symbols   { include "pc+us+inet(evdev)"	
+
+		// MM custom modifiers for Apple USB Keyboard
+		replace key <LWIN> { [ Control_L, Control_L ] };
+		replace key <LCTL> { [ Super_L ] };
+		replace key <RWIN> { [ Control_R, Control_R ] };
+		replace key <RCTL> { [ Super_R ] };
+
+	   replace key <BKSP> {
+	      type = "CMD_OPT_HELD",
+	      symbols[Group1] = [ BackSpace, BackSpace, BackSpace, BackSpace ],
+	      actions[Group1] = [ RedirectKey(key=<BKSP>,clearmods=Control+Mod1),
+		 RedirectKey(key=<BKSP>,clearmods=Control+Mod1,modifiers=Control),
+		 RedirectKey(key=<BKSP>,clearmods=Control+Mod1,modifiers=Mod1),
+		 NoAction() ]
+	    };
+
+	   replace key <DELE> {
+	      type = "CMD_OPT_HELD",
+	      symbols[Group1] = [ Delete, Delete, Delete, Delete ],
+	      actions[Group1] = [ RedirectKey(key=<DELE>,clearmods=Control+Mod1),
+		 RedirectKey(key=<DELE>,clearmods=Control+Mod1,modifiers=Control),
+		 RedirectKey(key=<DELE>,clearmods=Control+Mod1,modifiers=Mod1),
+		 NoAction() ]
+	    };
+
+            replace key <UP> {
+	      type = "CMD_OPT_HELD",
+	      symbols[Group1] = [ Up, Up, Up, Up ],
+	      actions[Group1] = [ RedirectKey(key=<UP>,clearmods=Control+Mod1),
+		 RedirectKey(key=<UP>,clearmods=Control+Mod1,modifiers=Control),
+		 RedirectKey(key=<UP>,clearmods=Control+Mod1,modifiers=Mod1),
+		 NoAction() ]
+	    };
+
+	    replace key <LEFT> {
+	      type[Group1] = "CMD_OPT_HELD",
+	      symbols[Group1] = [ Left, Left, Left, Left ],
+	      actions[Group1] = [ RedirectKey(key=<LEFT>,clearmods=Control+Mod1),
+		 RedirectKey(key=<LEFT>,clearmods=Control+Mod1,modifiers=Control),
+		 RedirectKey(key=<LEFT>,clearmods=Control+Mod1,modifiers=Mod1),
+		 NoAction() ]
+	    };
+
+	    replace key <DOWN> {
+	      type = "CMD_OPT_HELD",
+	      symbols[Group1] = [ Down, Down, Down, Down ],
+	      actions[Group1] = [ RedirectKey(key=<DOWN>,clearmods=Control+Mod1),
+		 RedirectKey(key=<DOWN>,clearmods=Control+Mod1,modifiers=Control),
+		 RedirectKey(key=<DOWN>,clearmods=Control+Mod1,modifiers=Mod1),
+		 NoAction() ]
+	    };
+
+	    replace key <RGHT> {
+	      type = "CMD_OPT_HELD",
+	      symbols[Group1] = [ Right, Right, Right, Right ],
+	      actions[Group1] = [ RedirectKey(key=<RGHT>,clearmods=Control+Mod1),
+		 RedirectKey(key=<RGHT>,clearmods=Control+Mod1,modifiers=Control),
+		 RedirectKey(key=<RGHT>,clearmods=Control+Mod1,modifiers=Mod1),
+		 NoAction() ]
+	    };
+
+	    replace key <NMLK> { [ Clear ] };
+
+	    replace key <KP7> { [ KP_7 ] };
+	    replace key <KP8> { [ KP_8 ] };
+	    replace key <KP9> { [ KP_9 ] };
+
+	    replace key <KP4> { [ KP_4 ] };
+	    replace key <KP5> { [ KP_5 ] };
+	    replace key <KP6> { [ KP_6 ] };
+
+	    replace key <KP1> { [ KP_1 ] };
+	    replace key <KP2> { [ KP_2 ] };
+	    replace key <KP3> { [ KP_3 ] };
+	    replace key <KPEN> { [ KP_Enter ] };
+	    replace key <KPEQ> { [ KP_Equal ] };
+
+	    replace key <KP0> { [ KP_0 ] };
+	    replace key <KPDL> { [ KP_Decimal ] };
+	    replace key <KPPT> { [ KP_Decimal ] };
+
+	};
+	xkb_geometry  { include "pc(pc105)"	};
+};
