@@ -1,0 +1,2 @@
+# place in ~
+(sleep 5 && xkbcomp $HOME/.xkb/custom-apple-usb $DISPLAY) &
