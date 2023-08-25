@@ -1,0 +1,15 @@
+script is named:
+
+~/.local/bin/xdg-open
+
+And contains the following:
+
+#!/bin/bash
+
+echo "go to xdg-open"
+XDG_CURRENT_DESKTOP=X-Generic /usr/bin/xdg-open $@
+
+The script will simply set the XDG_CURRENT_DESKTOP and then run xdg-open normally
+---
+
+Taken from https://www.reddit.com/r/kde/comments/zm6gag/prevent_a_browser_window_from_changing_virtual/
